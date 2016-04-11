@@ -9,6 +9,11 @@
     <div class="top-menu">
       <ul class="megamenu skyblue ">
         <li><a class="color1" href="#">主页</a>
+
+
+
+
+
           <!--企业文化index-->
         <li class="grid"><a class="color2" href=<%= adminwenhuas_path %>>企业文化</a>
 
@@ -46,16 +51,20 @@
   <div class="content">
     <div class="register">
       <form>
+
         <center>
 
           <div>
             <h3>企业文化</h3>
           </div>
+
           <div>
             <span>标题</span>
             <input type="text">
+
           </div>
           <br>
+
           <div>
             <span>内容</span>
             <textarea cols="5"  name="adminwenhua[summary]" id="adminwenhua_summary"></textarea>
@@ -70,40 +79,32 @@
     </div>
 
 
-    <% if params[:id] %>
-        <div >
-
-          <%= f.kindeditor :adminwenhuas, :simple_mode => true,:owner_id => @adminwenhua.id,height:800 %>
+    <%= link_to '创建企业文化',new_adminwenhua_path %>
 
 
-        </div>
-    <% end %>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    <div class="clearfix">
-      <div class="register-but">
-
-          <input value="创建企业文化" type="submit">
-          <div class="clearfix ">
-          </div>
-
-      </div>
-    </div>
   </div>
 </section>
+
+
+
+
+
+
+
+<% if params[:id] %>
+    <div >
+
+      <%= f.kindeditor :@wenhua, :simple_mode => true,:owner_id => @wenhua.id,height:800 %>
+
+
+    </div>
+<% end %>
+
+
+
+
+
+
 
 
 <%= render 'dibu' %>
