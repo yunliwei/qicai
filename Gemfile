@@ -1,5 +1,6 @@
 source 'https://gems.ruby-china.org'
 
+
 gem 'paperclip'
 gem 'rails_kindeditor', github: 'Macrow/rails_kindeditor'
 gem 'carrierwave'
