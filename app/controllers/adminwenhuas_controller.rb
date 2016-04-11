@@ -2,29 +2,31 @@ class AdminwenhuasController < ApplicationController
 
   def index
 
+    @adminwenhuas= Wenhua.all.order("updated_at DESC").paginate :page => params[:page], per_page:10
 
   end
 
   # GET /tests/1
   # GET /tests/1.json
   def show
+
   end
 
   # GET /tests/new
   def new
-    @adminwenhua = Adminwenhua.new
+    @adminwenhua =Wenhua.new
 
   end
 
   # GET /tests/1/edit
   def edit
-
+    @adminwenhuas= Wenhua.all
   end
 
   # POST /tests
   # POST /tests.json
   def create
-    @adminwenhua = Adminwenhua.new(adminwenhuas_params)
+    @adminwenhua = Wenhua.new(adminwenhua_params)
 
     respond_to do |format|
       if @adminwenhua.save
@@ -69,7 +71,7 @@ class AdminwenhuasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def adminwenhua_params
-    params.require(:adminwenhua).permit( :title,:content, )
+    params.require(:wenhua).permit( :title,:content)
   end
 
 end
