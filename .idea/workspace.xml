@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aacb37f9-35e6-482a-9f4c-5b6d77a39488" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__qicai.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Production__qicai.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/spec__qicai.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test__qicai.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adminwenhuas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/adminwenhuas/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/adminwenhuas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/adminwenhuas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adminwenhuas/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/adminwenhuas/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adminwenhuas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/adminwenhuas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/wenhuas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/wenhuas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adminwenhuas/new.html.erb" afterPath="$PROJECT_DIR$/app/views/adminwenhuas/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adminwenhuas/show.html.erb" afterPath="$PROJECT_DIR$/app/views/adminwenhuas/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="qicai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,8 +71,8 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/adminwenhuas/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5503212" vertical-offset="881" max-vertical-offset="1815">
-              <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.50214136" vertical-offset="881" max-vertical-offset="1845">
+              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -172,8 +161,8 @@
         <option value="$PROJECT_DIR$/app/views/adminwenhuas/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/adminwenhuas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/wenhuas/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/adminwenhuas/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/adminwenhuas/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/adminwenhuas/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -1087,8 +1076,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/adminwenhuas/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5503212" vertical-offset="881" max-vertical-offset="1815">
-          <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.50214136" vertical-offset="881" max-vertical-offset="1845">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
           <folding />
         </state>
       </provider>
