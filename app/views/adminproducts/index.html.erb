@@ -1,0 +1,10 @@
+<%= render 'top'%>
+<%= render 'menu'  %>
+<%= render 'slider'  %>
+<%= render 'leftbar' %>
+<% @leftcontent.each do |f| %>
+
+    <img src=<%=image_path(f.id)+ '/'+f.image_file_name %>>
+<%end%>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<%= render 'dibu'%>
