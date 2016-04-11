@@ -1,26 +1,16 @@
 <%= render 'top' %>
+
 <script>
     $(document).ready(function(){$(".megamenu").megamenu();});
 </script>
-
 <div class="navigation-strip">
   <div class="container">
-
-
-
-
     <h4>logo位置<i class="arrow"></i></h4>
     <div class="top-menu">
       <ul class="megamenu skyblue ">
         <li><a class="color1" href="#">主页</a>
-
-
-
-          <!--企业文化后台 edit-->
-
-
-        <li class="grid"><a class="color2" href="#">企业文化</a>
-
+          <!--企业文化index-->
+        <li class="grid"><a class="color2" href=<%= adminwenhuas_path %>>企业文化</a>
 
 
 
@@ -45,48 +35,81 @@
         <li><a class="color1" href="#">jeans</a>
 
         <li><a class="color10" href="#">perfumes</a>
-
-
       </ul>
     </div>
   </div>
 </div>
 
+<!--企业文化-->
 
 <section id="main">
   <div class="content">
-
-
     <div class="register">
       <form>
-        <div class="register-top-grid">
-          <h3>企业文化</h3>
+        <center>
+
+          <div>
+            <h3>企业文化</h3>
+          </div>
           <div>
             <span>标题</span>
             <input type="text">
           </div>
-
+          <br>
           <div>
             <span>内容</span>
-            <input type="text">
+            <textarea cols="5"  name="adminwenhua[summary]" id="adminwenhua_summary"></textarea>
+
           </div>
+
+        </center>
+
+
+
+      </form>
+    </div>
+
+
+    <% if params[:id] %>
+        <div >
+
+          <%= f.kindeditor :adminwenhuas, :simple_mode => true,:owner_id => @adminwenhua.id,height:800 %>
 
 
         </div>
-
-      </form>
-    </div>
-
-    <div class="clearfix"></div>
+    <% end %>
 
 
 
-    <div class="clearfix"> </div>
-    <div class="register-but">
-      <form>
-        <input value="submit" type="submit">
-        <div class="clearfix"> </div>
-      </form>
+
+
+
+
+
+
+
+
+
+
+    <div class="clearfix">
+      <div class="register-but">
+
+          <input value="创建企业文化" type="submit">
+          <div class="clearfix ">
+          </div>
+
+      </div>
     </div>
   </div>
 </section>
+
+
+<%= render 'dibu' %>
+
+
+
+
+
+
+
+

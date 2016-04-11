@@ -12,7 +12,7 @@ class AdminwenhuasController < ApplicationController
 
   # GET /tests/new
   def new
-    @adminwenhua= Adminwenhua.new
+    @adminwenhua = Adminwenhua.new
 
   end
 
@@ -24,7 +24,7 @@ class AdminwenhuasController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-    @adminwenhua = Adminwenhua.new(content_params)
+    @adminwenhua = Adminwenhua.new(adminwenhuas_params)
 
     respond_to do |format|
       if @adminwenhua.save
@@ -63,12 +63,12 @@ class AdminwenhuasController < ApplicationController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_content
+  def set_adminwenhua
     @adminwenhua = Adminwenhua.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def content_params
+  def adminwenhua_params
     params.require(:adminwenhua).permit( :title,:content, )
   end
 
