@@ -11,14 +11,6 @@
           <!--企业文化index-->
         <li class="grid"><a class="color2" href=<%adminwenhuas_path %>>企业文化</a>
 
-
-
-
-
-
-
-
-
         <li class="grid"><a class="color4" href="#">玫瑰花作用与效果</a>
 
         <li><a class="color5" href="#">产品中心</a>
@@ -50,7 +42,7 @@
 
 <div class="container content">
   <%= form_for(@adminwenhua,:html => {:multipart => true}) do |f| %>
-      <%= f.kindeditor :adminwenhuas, :simple_mode => true,:owner_id => @adminwenhua.id , :allowFileManager => false %>
+      <%= f.kindeditor :adminwenhua, :simple_mode => true,:owner_id => @adminwenhua.id , :allowFileManager => false %>
 
       <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
         <div class="pull-right">
