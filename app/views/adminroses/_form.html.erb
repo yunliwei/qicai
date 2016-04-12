@@ -1,0 +1,118 @@
+<%= render 'top' %>
+
+<script>
+    $(document).ready(function(){$(".megamenu").megamenu();});
+</script>
+<div class="navigation-strip">
+  <div class="container">
+    <h4>logo位置<i class="arrow"></i></h4>
+    <div class="top-menu">
+      <ul class="megamenu skyblue ">
+        <li><a class="color1" href="#">主页</a>
+
+
+
+
+
+          <!--企业文化index-->
+        <li class="grid"><a class="color2" href=<%= adminroses_path %>>企业文化</a>
+
+
+
+
+
+
+
+
+
+        <li class="grid"><a class="color4" href="#">玫瑰花作用与效果</a>
+
+        <li><a class="color5" href="#">产品中心</a>
+
+        <li><a class="color6" href="#">关于我们</a>
+
+        <li><a class="color8" href="#">新闻中心</a>
+
+        <li><a class="color9" href="#">T-shirts</a>
+
+        <li><a class="color5" href="#">sarees</a>
+
+        <li><a class="color1" href="#">jeans</a>
+
+        <li><a class="color10" href="#">perfumes</a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--企业文化-->
+
+<section id="main">
+  <div class="content">
+    <div class="register">
+      <form>
+
+        <center>
+
+          <div>
+            <h3>企业文化</h3>
+          </div>
+
+          <div>
+            <span>标题</span>
+            <input type="text">
+
+          </div>
+          <br>
+
+          <div>
+            <span>内容</span>
+            <textarea cols="5"  name="adminwenhua[summary]" id="adminwenhua_summary"></textarea>
+
+          </div>
+
+        </center>
+
+
+
+      </form>
+    </div>
+
+
+    <%= link_to '创建企业文化',new_adminwenhua_path %>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<% if params[:id] %>
+    <div >
+
+      <%= f.kindeditor :@wenhua, :simple_mode => true,:owner_id => @wenhua.id,height:800 %>
+
+
+    </div>
+<% end %>
+
+
+
+
+
+
+
+
+<%= render 'dibu' %>
+
+
+
+
+
+
+
+

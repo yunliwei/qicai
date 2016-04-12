@@ -1,0 +1,63 @@
+<%= render 'top' %>
+<script>
+    $(document).ready(function(){$(".megamenu").megamenu();});
+</script>
+<div class="navigation-strip">
+  <div class="container">
+    <h4>logo位置<i class="arrow"></i></h4>
+    <div class="top-menu">
+      <ul class="megamenu skyblue ">
+        <li><a class="color1" href="#">主页</a>
+          <!--企业文化index-->
+        <li class="grid"><a class="color2" href=<%adminroses_path %>>企业文化</a>
+
+
+
+
+
+
+
+
+
+        <li class="grid"><a class="color4" href="#">玫瑰花作用与效果</a>
+
+        <li><a class="color5" href="#">产品中心</a>
+
+        <li><a class="color6" href="#">关于我们</a>
+
+        <li><a class="color8" href="#">新闻中心</a>
+
+        <li><a class="color9" href="#">T-shirts</a>
+
+        <li><a class="color5" href="#">sarees</a>
+
+        <li><a class="color1" href="#">jeans</a>
+
+        <li><a class="color10" href="#">perfumes</a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="container content">
+  <%= form_for(@adminroses,:html => {:multipart => true}) do |f| %>
+      <%= f.kindeditor :adminroses, :simple_mode => true, :owner_id => @adminroses.id , :allowFileManager => false %>
+
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+        <div class="pull-right">
+          <%= f.submit '确定',class:'btn-small btn-color btn-pad' %>
+        </div>
+
+      </div>
+  <% end %>
+
+</div>
