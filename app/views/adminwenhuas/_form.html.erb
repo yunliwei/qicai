@@ -1,5 +1,6 @@
 <%= render 'top' %>
-
+<script charset="utf-8" src="/editor/kindeditor.js"></script>
+<script charset="utf-8" src="/editor/lang/zh-CN.js"></script>
 <script>
     $(document).ready(function(){$(".megamenu").megamenu();});
 </script>
@@ -9,13 +10,10 @@
     <div class="top-menu">
       <ul class="megamenu skyblue ">
         <li><a class="color1" href="#">主页</a>
-
-
-
-
-
           <!--企业文化index-->
         <li class="grid"><a class="color2" href=<%= adminwenhuas_path %>>企业文化</a>
+
+
 
 
 
@@ -45,6 +43,12 @@
   </div>
 </div>
 
+
+
+
+
+
+
 <!--企业文化-->
 
 <section id="main">
@@ -72,17 +76,37 @@
           </div>
 
         </center>
-
-
-
       </form>
     </div>
 
 
+    <div class="pull-right">
     <%= link_to '创建企业文化',new_adminwenhua_path %>
 
 
-  </div>
+
+    <br>
+    <br>
+
+
+</div>
+
+    <%= form_for(@adminwenhua) do |f| %>
+
+        <div >
+
+          <%= f.kindeditor :content, :simple_mode => true,:owner_id => @adminwenhua.id,height:800 %>
+
+
+        </div>
+
+<div class="pull-right">
+        <%= f.submit '确定',class:'btn-small btn-color btn-pad' %>
+      </div>
+    <% end %>
+
+
+    </div>
 </section>
 
 
@@ -91,14 +115,12 @@
 
 
 
-<% if params[:id] %>
-    <div >
-
-      <%= f.kindeditor :@wenhua, :simple_mode => true,:owner_id => @wenhua.id,height:800 %>
 
 
-    </div>
-<% end %>
+
+
+
+
 
 
 

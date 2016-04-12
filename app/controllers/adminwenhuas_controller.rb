@@ -1,9 +1,8 @@
 class AdminwenhuasController < ApplicationController
-
+  before_action :set_adminwenhua, only: [:show, :edit, :update, :destroy]
   def index
 
-    @adminwenhuas= Wenhua.all.order("updated_at DESC").paginate :page => params[:page], per_page:10
-
+    @adminwenhuas= Wenhua.all
   end
 
   # GET /tests/1
@@ -20,7 +19,7 @@ class AdminwenhuasController < ApplicationController
 
   # GET /tests/1/edit
   def edit
-    @adminwenhuas= Wenhua.all
+
   end
 
   # POST /tests
@@ -30,7 +29,7 @@ class AdminwenhuasController < ApplicationController
 
     respond_to do |format|
       if @adminwenhua.save
-        format.html { redirect_to edit_adminwenhuas_path(@adminwenhua), notice: 'Test was successfully created.' }
+        format.html { redirect_to adminwenhua_path, notice: 'Test was successfully created.' }
         format.json { render :show, status: :created, location: @adminwenhua }
       else
         format.html { render :new }
@@ -66,7 +65,7 @@ class AdminwenhuasController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_adminwenhua
-    @adminwenhua = Adminwenhua.find(params[:id])
+    @adminwenhua = Wenhua.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
