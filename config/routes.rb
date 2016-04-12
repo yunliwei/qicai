@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
   resources :tests
   resources :sides
+  resources :roses
   resources :wenhuas
   resources :adminwenhuas
   resources :adminproducts
+  resources :adminroses
+
+
+  namespace :admin do
+    resource :sessions,only: [:new]
+    match '/signin',to: 'sessions#new',via:'get'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
