@@ -1,9 +1,11 @@
 class AdminproductsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   def index
-
     @leftcontent=Product.all
   end
+
+
+
 
 
   def show
@@ -11,25 +13,27 @@ class AdminproductsController < ApplicationController
 
   # GET /tests/new
   def new
-    @product = Product.new
+    @adminproduct = Product.new
   end
 
   # GET /tests/1/edit
   def edit
   end
 
+
+
   # POST /tests
   # POST /tests.json
   def create
-    @product = Product.new(admin_params)
+    @adminproduct = Product.new(admin_params)
 
     respond_to do |format|
-      if @product.save
-        format.html { redirect_to adminproducts_url, notice: '创建产品成功!' }
-        format.json { render :show, status: :created, location: @product }
+      if @adminproduct.save
+        format.html { redirect_to admins_path, notice: 'Test was successfully created.' }
+        format.json { render :show, status: :created, location: @admin }
       else
         format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.json { render json: @admin.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -39,11 +43,11 @@ class AdminproductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(admin_params)
-        format.html { redirect_to adminproducts_url, notice: '创建产品成功!' }
-        format.json { render :show, status: :ok, location: @product }
+        format.html { redirect_to @admin, notice: 'Test was successfully updated.' }
+        format.json { render :show, status: :ok, location: @admin }
       else
         format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.json { render json: @admin.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -53,7 +57,7 @@ class AdminproductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to adminproducts_url, notice: '成功删除记录项!' }
+      format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -65,11 +69,11 @@ class AdminproductsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_admin
-    @product = Product.find(params[:id])
+    @adminproduct = Product.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_params
-    params.require(:product).permit(:name, :price, :summary, :content,:image)
+    params.require(:adminproduct).permit(:name, :price, :summary, :content, :image)
   end
 end

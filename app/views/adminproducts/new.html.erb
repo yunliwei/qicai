@@ -1,6 +1,6 @@
-<%= form_for([@product],:html => {:class=>'form-horizontal m-t',id:"signupForm",:multipart => true}) do |f| %>
+<%= form_for(@adminproduct, :html => {:class=>'form-horizontal m-t',id:"signupForm",:multipart => true}) do |f| %>
 
-    <% @url=request.url %>
+
     <div class="form-group">
       <label class="col-sm-3 control-label">姓名：</label>
       <div class="col-sm-5">
@@ -43,7 +43,5 @@
 
       </div>
     </div>
-
+    </div>
 <% end %>
-</div>
-
