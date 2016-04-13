@@ -1,10 +1,62 @@
 <%= render 'top'%>
 <%= render 'menu'  %>
 <%= render 'slider'  %>
+<<<<<<< HEAD
 <%= render 'leftbar' %>
 
 <% @leftcontent.each do |f| %>
     <img src=<%=image_path(f.id)+ '/'+f.image_file_name %>>
 <%end%>
+=======
+
+<div class="col-lg-12">
+
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h5></h5>
+
+    </div>
+    <div class="ibox-content">
+
+      <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+          <th  style="text-align:center">产口品类型</th>
+          <th style="text-align:center">产品名称</th>
+          <th style="text-align:center">价格</th>
+          <th style="text-align:center">产品描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @leftcontent.each do |f| %>
+            <tr>
+              <td>
+                <%= f.productcla_id %>
+              </td>
+              <td style="text-align:center">
+                <%= f.name %>
+              </td>
+              <td style="text-align:center">
+                <%= f.price %>
+              </td>
+              <td style="text-align:center">
+                <%= f.summary %>
+              </td>
+              <td>
+                <%= link_to "查看", edit_adminproduct_path(f),class: "fa fa-pencil" %>&nbsp;
+                <%= link_to '删除', adminproduct_path(f), class: "fa fa-trash", method: :delete, data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to "new", new_adminproduct_path,class: "btn btn-w-m btn-success mylink pull-right",'data-no-turbolink'=>true %>
+      <br>
+    </div>
+
+  </div>
+</div>
+
+>>>>>>> a9903ece80c14e356b0157a9549052559786288e
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%= render 'dibu'%>

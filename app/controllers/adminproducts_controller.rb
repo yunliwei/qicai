@@ -55,9 +55,9 @@ class AdminproductsController < ApplicationController
   # DELETE /tests/1
   # DELETE /tests/1.json
   def destroy
-    @product.destroy
+    @adminproduct.destroy
     respond_to do |format|
-      format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
+      format.html { redirect_to adminproducts_path, notice: '记录已经删除!' }
       format.json { head :no_content }
     end
   end

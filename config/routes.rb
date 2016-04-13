@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :wenhuas
   resources :adminwenhuas
 
+
   resources :adminproducts
+
+
 
 
   resources :products
@@ -17,6 +20,7 @@ Rails.application.routes.draw do
     resource :sessions,only: [:new]
     match '/signin',to: 'sessions#new',via:'get'
   end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
