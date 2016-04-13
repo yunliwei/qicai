@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :roses
   resources :wenhuas
   resources :adminwenhuas
+
   resources :adminproducts
+
 
   resources :products
 

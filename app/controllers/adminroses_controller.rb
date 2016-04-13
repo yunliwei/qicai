@@ -1,8 +1,8 @@
 class AdminrosesController < ApplicationController
-
+  before_action :set_adminrose, only: [:show, :edit, :update, :destroy]
   def index
 
-    @adminrose = Rose.all.order("updated_at DESC").paginate :page => params[:page], per_page:10
+    @adminroses = Rose.all
 
   end
 
@@ -20,7 +20,6 @@ class AdminrosesController < ApplicationController
 
   # GET /tests/1/edit
   def edit
-    @adminrose = Rose.all
   end
 
   # POST /tests
@@ -66,7 +65,7 @@ class AdminrosesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_adminrose
-    @adminrose = Adminrose.find(params[:id])
+    @adminrose = Rose.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
