@@ -4,10 +4,7 @@ Rails.application.routes.draw do
   resources :roses
   resources :wenhuas
   resources :adminwenhuas
-  resources :adminproducts
-<<<<<<< HEAD
   resources :products
-=======
   resources :adminroses
 
 
@@ -15,7 +12,6 @@ Rails.application.routes.draw do
     resource :sessions,only: [:new]
     match '/signin',to: 'sessions#new',via:'get'
   end
->>>>>>> a188b7a1728da01cc41f0fec5bd24bf0e2e2443a
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
