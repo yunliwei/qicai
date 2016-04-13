@@ -1,5 +1,5 @@
-<%= render 'form'%>
-<div id="main">
+
+
   <div class="breadcrumb-wrapper">
     <div class="container">
 
@@ -10,35 +10,38 @@
           <tr>
             <th>标题</th>
             <th>创建时间</th>
-            <th>内容</th>
             <th>操作</th>
           </tr>
           </thead>
-          <tbody>
-          <%@adminrose.each do |adminrose| %>
+         <% @adminroses.each do |f| %>
               <tr>
-                <td><%= adminrose.title %></td>
                 <td>
+              <%= f.title %>
                 </td>
-                <td><%= adminrose.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
-                <td><%= adminrose.content%></td>
-                <td><%= link_to '',edit_adminroses_path(adminrose),class:"icon-pencil",'data-no-turbolink' => true %>&nbsp;<%= link_to '', adminrose, method: :delete, data: { confirm: 'Are you sure?' },class:"icon-trash" %></td>
+                <td>
+                  <%= f.created_at %>
+                </td>
+                <td>
+                  <%= link_to '编辑',edit_adminrose_path(f) %>
+                </td>
               </tr>
-          <% end %>
+         <% end %>
+
+
+
+          <tbody>
+
 
           </tbody>
         </table>
-
-
-
-        <div >
-
-          <%= will_paginate @adminrose, previous_label:'上一页', next_label: '下一页' %>
-        </div>
-        <%= link_to '创建文章',new_adminroses_path,class:"btn-small btn-color btn-pad pull-right",'data-no-turbolink' => true %>
-      </div>
-
-
     </div>
   </div>
 </div>
+  </div>
+  <div class="pull-right">
+    <%= link_to '创建玫瑰花的功效',new_adminrose_path %>
+    <br>
+    <br>
+
+
+  </div>
