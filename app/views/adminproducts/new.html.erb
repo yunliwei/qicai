@@ -24,7 +24,7 @@
     <div class="form-group">
       <label class="col-sm-3 control-label">产品内容:</label>
       <div class="col-sm-5">
-        <%= f.text_field :content ,class:"form-control",id:"status",value:"1"%>
+        <%= f.text_area :content ,class:"form-control",id:"status",col:"100"%>
       </div>
     </div>
 
@@ -37,8 +37,7 @@
 
     <div class="form-group">
       <div class="col-sm-4 col-sm-offset-3">
-        <%= f.submit 'tijiao',class:"btn btn-sucess" %>
-
+        <%= f.submit '提交',class:"btn btn-sucess" %>
 
 
       </div>
