@@ -1,7 +1,21 @@
 class ProductsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   def index
-    @leftcontent=Product.all
+
+    @recordfst=""
+    @showcontent=nil
+    if (params[:ptypeid]==nil)
+
+      @recordfst="true"
+      @showcontent=Productcla.first
+
+    else
+      @recordfst="false"
+
+      @showcontent=Productcla.find(params[:ptypeid])
+
+
+    end
   end
 
 
@@ -74,6 +88,6 @@ class ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_params
-    params.require(:product).permit(:name, :price, :summary, :content, :image)
+    params.require(:product).permit(:productcla_id,:name, :price, :summary, :content, :image)
   end
 end

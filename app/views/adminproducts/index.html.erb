@@ -1,8 +1,11 @@
 <%= render 'top'%>
 <%= render 'menu'  %>
 <%= render 'slider'  %>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7e761e0bcf78aae0991b0c06a9aec6750108fe20
 
 <div class="col-lg-12">
 
@@ -26,7 +29,7 @@
         <% @leftcontent.each do |f| %>
             <tr>
               <td>
-                <%= f.productcla_id %>
+              <%@section=Productcla.find(f.productcla_id)%><%=@section.name%>   ID:<%= f.productcla_id %>
               </td>
               <td style="text-align:center">
                 <%= f.name %>
@@ -52,6 +55,9 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e761e0bcf78aae0991b0c06a9aec6750108fe20
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%= render 'dibu'%>
