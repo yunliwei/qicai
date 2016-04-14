@@ -1,0 +1,46 @@
+<%= render 'top'%>
+<%= render 'menu'  %>
+<%= render 'slider'  %>
+
+
+<div class="col-lg-12">
+
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h5></h5>
+
+    </div>
+    <div class="ibox-content">
+
+      <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+          <th  style="text-align:center">产品类型ID</th>
+          <th style="text-align:center">产品类型</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @producttype.each do |f| %>
+            <tr>
+              <td style="text-align:center">
+                <%= f.id %>
+              </td>
+              <td style="text-align:center">
+                <%= f.name %>
+              </td>
+              <td>
+                <%= link_to '删除', productcla_path(f), class: "fa fa-trash", method: :delete, data: { confirm: '确实要删除记录吗?' } %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to "new", new_productcla_path,class: "btn btn-w-m btn-success mylink pull-right",'data-no-turbolink'=>true %>
+      <br>
+    </div>
+
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<%= render 'dibu'%>

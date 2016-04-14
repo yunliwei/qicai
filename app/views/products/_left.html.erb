@@ -3,56 +3,29 @@
  <div class="main">
    <div class="sub-cate" >
      <div class=" top-nav rsidebar span_1_of_left">
-       <h3 class="cate">CATEGORIES</h3>
+       <h3 class="cate">产品列表</h3>
        <ul class="menu">
-         <li class="item1"><a href="#">Curabitur sapien<img class="arrow-img" src="images/arrow1.png" alt=""/> </a>
+
+         <%@pt=Productcla.all%>
+         <%@pt.each do |pp|%>
+
+         <li class="item1"><a href="#"><%=pp.name %><img class="arrow-img" src="images/arrow1.png" alt=""/> </a>
+
+             <%@sel="select * from products where productcla_id="+pp.id.to_s%>
+             <%@ptsubmenu=Product.find_by_sql(@sel)%>
+
            <ul class="cute">
-             <li class="subitem1"><a href="products.html">Cute Kittens </a></li>
-             <li class="subitem2"><a href="products.html">Strange Stuff </a></li>
-             <li class="subitem3"><a href="products.html">Automatic Fails </a></li>
+             <%@ptsubmenu.each do|pp2|%>
+                 <li class="subitem1"><a href="products3.html"><%=pp2.name%></a></li>
+           <%end%>
            </ul>
+       <%end%>
          </li>
-         <li class="item2"><a href="#">Dignissim purus <img class="arrow-img " src="images/arrow1.png" alt=""/></a>
-           <ul class="cute">
-             <li class="subitem1"><a href="products.html">Cute Kittens </a></li>
-             <li class="subitem2"><a href="products.html">Strange Stuff </a></li>
-             <li class="subitem3"><a href="products.html">Automatic Fails </a></li>
-           </ul>
-         </li>
-         <li class="item3"><a href="#">Ultrices id du<img class="arrow-img img-arrow" src="images/arrow1.png" alt=""/> </a>
-           <ul class="cute">
-             <li class="subitem1"><a href="products.html">Cute Kittens </a></li>
-             <li class="subitem2"><a href="products.html">Strange Stuff </a></li>
-             <li class="subitem3"><a href="products.html">Automatic Fails</a></li>
-           </ul>
-         </li>
-         <li class="item4"><a href="#">Cras iacaus rhone <img class="arrow-img img-left-arrow" src="images/arrow1.png" alt=""/></a>
-           <ul class="cute">
-             <li class="subitem1"><a href="products.html">Cute Kittens </a></li>
-             <li class="subitem2"><a href="products.html">Strange Stuff </a></li>
-             <li class="subitem3"><a href="products.html">Automatic Fails </a></li>
-           </ul>
-         </li>
-         <li>
-           <ul class="kid-menu">
-             <li><a href="products.html">Tempus pretium</a></li>
-             <li ><a href="products.html">Dignissim neque</a></li>
-             <li ><a href="products.html">Ornared id aliquet</a></li>
-           </ul>
-         </li>
-         <ul class="kid-menu ">
-           <li><a href="products.html">Commodo sit</a></li>
-           <li ><a href="products.html">Urna ac tortor sc</a></li>
-           <li><a href="products.html">Ornared id aliquet</a></li>
-           <li><a href="products.html">Urna ac tortor sc</a></li>
-           <li ><a href="products.html">Eget nisi laoreet</a></li>
-           <li><a href="products.html">Faciisis ornare</a></li>
-           <li class="menu-kid-left"><a href="contact.html">Contact us</a></li>
-         </ul>
        </ul>
      </div>
    </div>
 
+   <div style="position:relative;left:150px">
 
 jkhsndfjhskjdfhsdf
 sdflksdjflksdjflkjsdlkfjlksdjfkljsdlkfjlsdflksdjflkjsdlkfj
@@ -61,6 +34,7 @@ fsdfksdfj<p align="center">sdkfojs</p><br>kdflksjdfkjsdlkfj <br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>lksdjf
 
       </div>
+   </div>
 
   <!--initiate accordion-->
   <script type="text/javascript">

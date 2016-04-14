@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :products
 
   resources :adminroses
-
+  resources :productclas
 
   namespace :admin do
     resource :sessions,only: [:new]
