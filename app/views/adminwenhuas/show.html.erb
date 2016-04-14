@@ -30,26 +30,4 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-<div class="container content">
-  <%= form_for(@adminwenhua,:html => {:multipart => true}) do |f| %>
-      <%= f.kindeditor :adminwenhua, :simple_mode => true,:owner_id => @adminwenhua.id , :allowFileManager => false %>
-
-      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
-        <div class="pull-right">
-          <%= f.submit '确定',class:'btn-small btn-color btn-pad' %>
-        </div>
-
-      </div>
-  <% end %>
-
-</div>
+<%= render 'dibu' %>

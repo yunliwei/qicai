@@ -3,6 +3,8 @@ class AdminwenhuasController < ApplicationController
   def index
 
     @adminwenhuas= Wenhua.all
+
+
   end
 
   # GET /tests/1
@@ -29,7 +31,7 @@ class AdminwenhuasController < ApplicationController
 
     respond_to do |format|
       if @adminwenhua.save
-        format.html { redirect_to adminwenhua_path, notice: 'Test was successfully created.' }
+        format.html { redirect_to adminwenhua_path(@adminwenhua),notice: 'Test was successfully created.' }
         format.json { render :show, status: :created, location: @adminwenhua }
       else
         format.html { render :new }

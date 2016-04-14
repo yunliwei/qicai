@@ -1,132 +1,45 @@
-<%= render 'top' %>
-<script charset="utf-8" src="/editor/kindeditor.js"></script>
-<script charset="utf-8" src="/editor/lang/zh-CN.js"></script>
-<script>
-    $(document).ready(function(){$(".megamenu").megamenu();});
-</script>
-<div class="navigation-strip">
-  <div class="container">
-    <h4>logo位置<i class="arrow"></i></h4>
-    <div class="top-menu">
-      <ul class="megamenu skyblue ">
-        <li><a class="color1" href="#">主页</a>
-          <!--企业文化index-->
-        <li class="grid"><a class="color2" href=<%= wenhuas_path %>>企业文化</a>
-
-
-
-
-
-
-
-
-
-
-
-        <li class="grid"><a class="color4" href="#">玫瑰花作用与效果</a>
-
-        <li><a class="color5" href="#">产品中心</a>
-
-        <li><a class="color6" href="#">关于我们</a>
-
-        <li><a class="color8" href="#">新闻中心</a>
-
-        <li><a class="color9" href="#">T-shirts</a>
-
-        <li><a class="color5" href="#">sarees</a>
-
-        <li><a class="color1" href="#">jeans</a>
-
-        <li><a class="color10" href="#">perfumes</a>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
 
 <!--企业文化-->
-
 <section id="main">
   <div class="content">
     <div class="register">
-      <form>
-
-        <center>
-
-
-
-          <div>
+<div class="container">
             <h1>企业文化</h1>
-          </div>
           <br>
           <br>
-          <br>
-          <br>
-
           <%= form_for(@adminwenhua) do |f| %>
-              <div >
+
 <h2>
-
                 <span>标题</span>
-
 </h2>
-<div class="text container">
-                <%= f.text_field :title %>
+              <div class="register-top-grid">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+
+                <%= f.text_field :title ,class:"form-control"%>
+                  </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <h2>
+<div>
+<br>
+  <br>
+  <br>
+  <br>
+
+  <h2>
+    <div class="pull-left">
                 <span>内容</span>
-                </h2>
-
-                <br>
-
+    </div>
+  </h2>
                 <%= f.kindeditor :content, :simple_mode => true,:owner_id => @adminwenhua.id,height:800 %>
-
-
-              </div>
+     </div>
               <div class="subscribe pull-right">
-
                 <%= f.submit '确定',class:'btn-small btn-color btn-pad' %>
-
                   </div>
 
           <% end %>
-
-
-
-
-
-
-
             <div class="clearfix">
-
             </div>
-
-
-
-
-        </center>
-      </form>
+</div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </section>
 

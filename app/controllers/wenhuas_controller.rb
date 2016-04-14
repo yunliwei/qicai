@@ -1,8 +1,9 @@
 class WenhuasController < ApplicationController
-  before_action :set_adminwenhua, only: [:show, :edit, :update, :destroy]
+  before_action :set_wenhua, only: [:show, :edit, :update, :destroy]
   def index
-
     @adminwenhua= Wenhua.all
+
+
   end
 
   # GET /tests/1
@@ -25,10 +26,10 @@ class WenhuasController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-    @adminwenhua = Wenhua.new(adminwenhua_params)
+    @wenhua = Wenhua.new(wenhua_params)
 
     respond_to do |format|
-      if @adminwenhua.save
+      if @wenhua.save
         format.html { redirect_to adminwenhuas_path, notice: 'Test was successfully created.' }
         format.json { render :show, status: :created, location: @adminwenhua }
       else
@@ -55,7 +56,7 @@ class WenhuasController < ApplicationController
   # DELETE /tests/1
   # DELETE /tests/1.json
   def destroy
-    @adminwenhua.destroy
+    @wenhua.destroy
     respond_to do |format|
       format.html { redirect_to adminwenhuas_path, notice: 'Test was successfully destroyed.' }
       format.json { head :no_adminwenhua }
@@ -69,7 +70,7 @@ class WenhuasController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def adminwenhua_params
+  def wenhua_params
     params.require(:wenhua).permit( :title,:content)
   end
 
