@@ -1,13 +1,6 @@
 <%= render 'top'%>
 <%= render 'menu'  %>
 <%= render 'slider'  %>
-<<<<<<< HEAD
-<%= render 'leftbar' %>
-
-<% @leftcontent.each do |f| %>
-    <img src=<%=image_path(f.id)+ '/'+f.image_file_name %>>
-<%end%>
-=======
 
 <div class="col-lg-12">
 
@@ -31,7 +24,7 @@
         <% @leftcontent.each do |f| %>
             <tr>
               <td>
-                <%= f.productcla_id %>
+              <%@section=Productcla.find(f.productcla_id)%><%=@section.name%>   ID:<%= f.productcla_id %>
               </td>
               <td style="text-align:center">
                 <%= f.name %>
@@ -57,6 +50,5 @@
   </div>
 </div>
 
->>>>>>> a9903ece80c14e356b0157a9549052559786288e
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%= render 'dibu'%>
