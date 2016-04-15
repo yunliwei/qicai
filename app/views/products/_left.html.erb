@@ -1,58 +1,144 @@
 
+<div class="main_bg">
+    <div class="main">
+        <div class="sub-cate">
+             <div class=" top-nav rsidebar span_1_of_left">
+               <h3 class="cate">产品列表</h3>
+               <ul class="menu">
 
- <div class="main">
-   <div class="sub-cate" >
-     <div class=" top-nav rsidebar span_1_of_left">
-       <h3 class="cate">产品列表</h3>
-       <ul class="menu">
+                 <%@pt=Productcla.all%>
+                 <%@pt.each do |pp|%>
 
-         <%@pt=Productcla.all%>
-         <%@pt.each do |pp|%>
+                 <li class="item1"><a href="#"><%=pp.name %><img class="arrow-img pull-right" src="images/arrow1.png" alt=""/> </a>
 
-         <li class="item1"><a href="#"><%=pp.name %><img class="arrow-img" src="images/arrow1.png" alt=""/> </a>
+                     <%@sel="select * from products where productcla_id="+pp.id.to_s%>
+                     <%@ptsubmenu=Product.find_by_sql(@sel)%>
 
-             <%@sel="select * from products where productcla_id="+pp.id.to_s%>
-             <%@ptsubmenu=Product.find_by_sql(@sel)%>
+                   <ul class="cute">
+                     <%@ptsubmenu.each do|pp2|%>
+                         <li class="subitem1"><a href=<%="products?ptypeid="+pp2.id.to_s%>><%=pp2.name%></a></li>
+                   <%end%>
+                   </ul>
+               <%end%>
+                 </li>
+               </ul>
+             </div>
+        </div>
 
-           <ul class="cute">
-             <%@ptsubmenu.each do|pp2|%>
-                 <li class="subitem1"><a href="products3.html"><%=pp2.name%></a></li>
-           <%end%>
-           </ul>
-       <%end%>
-         </li>
-       </ul>
-     </div>
-   </div>
 
-   <div style="position:relative;left:150px">
 
-jkhsndfjhskjdfhsdf
-sdflksdjflksdjflkjsdlkfjlksdjfkljsdlkfjlsdflksdjflkjsdlkfj
-fsdfksdfj<p align="center">sdkfojs</p><br>kdflksjdfkjsdlkfj <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br>lksdjf
+   <div style="position:relative;left:80px">
+      <table>
+        <tr >
+          <td>
+        <div>
+          <a href="single.html">
+            <img src="images/w_pic1.jpg" alt=""/>
+            <h3>branded sarees</h3>
+            <div class="price1">
+              <h4>$299<span>indulge</span></h4>
+            </div>
 
+          </a>
+        </div>
+          </td>
+          <td>
+        <div>
+          <a href="single.html">
+            <img src="images/w_pic2.jpg" alt=""/>
+            <h3>branded sarees</h3>
+            <div class="price1">
+              <h4>$299 <span>indulge</span></h4>
+            </div>
+          </a>
+        </div>
+          </td>
+
+
+          <td>
+        <div>
+          <a href="single.html">
+            <img src="images/w_pic3.jpg" alt=""/>
+            <h3>branded sarees</h3>
+            <div class="price1">
+              <h4>$299<span>indulge</span></h4>
+            </div>
+          </a>
+        </div>
+        <div class="clearfix"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+        <div class="grid1_of_3">
+          <a href="single.html">
+            <img src="images/w_pic4.jpg" alt=""/>
+            <h3>branded sarees</h3>
+            <div class="price1">
+              <h4>$299<span>indulge</span></h4>
+            </div>
+            <span class="b_btm"></span>
+          </a>
+        </div>
+          </td>
+
+
+          <td>
+        <div class="grid1_of_3">
+          <a href="single.html">
+            <img src="images/w_pic5.jpg" alt=""/>
+            <h3>branded sarees</h3>
+            <div class="price1">
+              <h4>$299<span>indulge</span></h4>
+            </div>
+            <span class="b_btm"></span>
+          </a>
+        </div>
+          </td>
+          <td>
+        <div class="grid1_of_3">
+          <a href="single.html">
+            <img src="images/w_pic6.jpg" alt=""/>
+            <h3>branded sarees</h3>
+            <div class="price1">
+              <h4>$299<span>indulge</span></h4>
+            </div>
+            <span class="b_btm"></span>
+          </a>
+        </div>
+        <div class="clearfix"></div>
+          </td>
+        </tr>
+      <!-- end grids_of_3 -->
+  </table>
       </div>
-   </div>
+</div>
 
-  <!--initiate accordion-->
-  <script type="text/javascript">
-      $(function() {
-          var menu_ul = $('.menu > li > ul'),
-                  menu_a  = $('.menu > li > a');
-          menu_ul.hide();
-          menu_a.click(function(e) {
-              e.preventDefault();
-              if(!$(this).hasClass('active')) {
-                  menu_a.removeClass('active');
-                  menu_ul.filter(':visible').slideUp('normal');
-                  $(this).addClass('active').next().stop(true,true).slideDown('normal');
-              } else {
-                  $(this).removeClass('active');
-                  $(this).next().stop(true,true).slideUp('normal');
-              }
-          });
+</div>
 
-      });
-  </script>
+
+
+
+
+
+ <script type="text/javascript">
+     $(function() {
+         var menu_ul = $('.menu > li > ul'),
+                 menu_a  = $('.menu > li > a');
+         menu_ul.hide();
+         menu_a.click(function(e) {
+             e.preventDefault();
+             if(!$(this).hasClass('active')) {
+                 menu_a.removeClass('active');
+                 menu_ul.filter(':visible').slideUp('normal');
+                 $(this).addClass('active').next().stop(true,true).slideDown('normal');
+             } else {
+                 $(this).removeClass('active');
+                 $(this).next().stop(true,true).slideUp('normal');
+             }
+         });
+
+     });
+ </script>
+
