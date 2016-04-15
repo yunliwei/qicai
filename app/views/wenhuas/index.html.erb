@@ -1,10 +1,16 @@
 <%= render 'top' %>
 <%= render 'menu' %>
-<%= render 'dibu' %>
+
 <div class="content">
   <div class="container">
+    <%= render 'left'%>
+<br>
+    <%= @content.content.html_safe %>
+
 
   </div>
 </div>
+
+<%= render 'dibu' %>
 
 

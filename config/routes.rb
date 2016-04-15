@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :roses
   resources :wenhuas
   resources :adminwenhuas
+  resources :news
+  resources :adminnews
 
 
   resources :adminproducts

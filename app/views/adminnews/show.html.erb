@@ -1,0 +1,33 @@
+<%= render 'top' %>
+<script>
+    $(document).ready(function(){$(".megamenu").megamenu();});
+</script>
+<div class="navigation-strip">
+  <div class="container">
+    <h4>logo位置<i class="arrow"></i></h4>
+    <div class="top-menu">
+      <ul class="megamenu skyblue ">
+        <li><a class="color1" href="#">主页</a>
+          <!--新闻中心index-->
+        <li class="grid"><a class="color2" href=<%adminwenhuas_path %>>企业文化</a>
+
+        <li class="grid"><a class="color4" href=<%= adminroses_path %>>玫瑰花作用与效果</a>
+
+        <li><a class="color5" href="#">产品中心</a>
+
+        <li><a class="color6" href="#">关于我们</a>
+
+        <li><a class="color8" href=<%= adminroses_path %>>新闻中心</a>
+
+        <li><a class="color9" href="#">T-shirts</a>
+
+        <li><a class="color5" href="#">sarees</a>
+
+        <li><a class="color1" href="#">jeans</a>
+
+        <li><a class="color10" href="#">perfumes</a>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render 'dibu' %>
