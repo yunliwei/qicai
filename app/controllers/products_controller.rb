@@ -7,12 +7,12 @@ class ProductsController < ApplicationController
     if (params[:ptypeid]==nil)
 
       @recordfst="true"
-      @showcontent=Productcla.first
+      @showcontent=Product.first
 
     else
       @recordfst="false"
 
-      @showcontent=Productcla.find(params[:ptypeid])
+      @showcontent=Product.find(params[:ptypeid])
 
 
     end
