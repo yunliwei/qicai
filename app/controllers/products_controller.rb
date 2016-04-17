@@ -2,20 +2,26 @@ class ProductsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   def index
 
-    @recordfst=""
+    @recordtype=""
     @showcontent=nil
-    if (params[:ptypeid]==nil)
+    @allcontent=Product.all
 
-      @recordfst="true"
-      @showcontent=Product.first
+   if (params[:ptypeid]==nil && params[:pclaid]==nil)
 
-    else
-      @recordfst="false"
+     @recordtype="lists"
+
+   end
+
+
+    if (params[:ptypeid]!=nil)
+
+      @recordtype="one"
 
       @showcontent=Product.find(params[:ptypeid])
 
 
     end
+
   end
 
 
