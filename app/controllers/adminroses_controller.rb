@@ -47,7 +47,7 @@ class AdminrosesController < ApplicationController
         format.json { render :show, status: :ok, location: @adminrose }
       else
         format.html { render :edit }
-        format.json { render json: @test.errors, status: :unprocessable_entity }
+        format.json { render json: @adminrose.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,7 +70,7 @@ class AdminrosesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def adminrose_params
-    params.require(:roses).permit( :title,:content)
+    params.require(:rose).permit( :title,:content)
   end
 
 end

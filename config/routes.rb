@@ -6,17 +6,14 @@ Rails.application.routes.draw do
   resources :adminwenhuas
   resources :news
   resources :adminnews
-
-
   resources :adminproducts
-
-
-
-
   resources :products
-
   resources :adminroses
   resources :productclas
+  resources :contacts
+  resources :abouts
+  resources :adminabouts
+
 
   namespace :admin do
     resource :sessions,only: [:new]
