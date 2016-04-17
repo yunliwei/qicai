@@ -42,12 +42,12 @@ class RosesController < ApplicationController
   # PATCH/PUT /tests/1.json
   def update
     respond_to do |format|
-      if @adminrose.update(adminroses_paths)
+      if @adminrose.update(rose_paths)
         format.html { redirect_to adminroses_path, notice: 'Test was successfully updated.' }
         format.json { render :show, status: :ok, location: @adminrose }
       else
         format.html { render :edit }
-        format.json { render json: @test.errors, status: :unprocessable_entity }
+        format.json { render json: @adminrose.errors, status: :unprocessable_entity }
       end
     end
   end
