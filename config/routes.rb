@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :products
   resources :adminroses
   resources :productclas
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0aa44c2b735474984120b60cd18df893fff21abc
   resources :contacts
   resources :abouts
   resources :adminabouts

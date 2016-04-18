@@ -26,10 +26,10 @@
 
 
 
-      <form method="post" action="contact-post.html">
 
-        <%= form_tag(action:'create', method: "post") do %>
 
+
+          <form method="post" action="contact-post.html">
         <p class="comment-form-author"><label for="name">姓名:</label>
           <input class="textbox" value="Enter your name here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" type="text">
         </p>
@@ -43,14 +43,13 @@
           <textarea value="Enter your message here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">Enter your message here...</textarea>
         </p>
         <input name="submit" id="submit" value="发送" type="submit">
+          </form>
 
 
 
 
 
-
-            <%= end %>
-      </form>
+      <
     </div>
   </div>
 
