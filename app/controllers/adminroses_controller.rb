@@ -29,7 +29,7 @@ class AdminrosesController < ApplicationController
 
     respond_to do |format|
       if @adminrose.save
-        format.html { redirect_to edit_adminroses_path(@adminrose), notice: 'Test was successfully created.' }
+        format.html { redirect_to edit_adminrose_path(@adminrose), notice: 'Test was successfully created.' }
         format.json { render :show, status: :created, location: @adminrose }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class AdminrosesController < ApplicationController
         format.json { render :show, status: :ok, location: @adminrose }
       else
         format.html { render :edit }
-        format.json { render json: @adminrose.errors, status: :unprocessable_entity }
+        format.json { render json: @adminroses.errors, status: :unprocessable_entity }
       end
     end
   end
