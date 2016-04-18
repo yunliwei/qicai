@@ -4,14 +4,22 @@ class ProductsController < ApplicationController
 
     @recordtype=""
     @showcontent=nil
-    @allcontent=Product.all
+
 
    if (params[:ptypeid]==nil && params[:pclaid]==nil)
 
      @recordtype="lists"
+     @allcontent=Product.all
 
    end
 
+
+    if (params[:pclaid]!=nil)
+     @recordtype="sec"
+      ssel="select * from products where productcla_id="+params[:pclaid]
+      @allcontent=Product.find_by_sql(ssel)
+
+    end
 
     if (params[:ptypeid]!=nil)
 

@@ -6,14 +6,16 @@
         <ul class="menu">
 
           <%@pt=Productcla.all%>
+          <a href="products"><h4>&nbsp;&nbsp;&nbsp;全部</h4></a>
           <%@pt.each do |pp|%>
 
-              <li class="item1"><a href="#"><%=pp.name %><img class="arrow-img pull-right" src="images/arrow1.png" alt=""/> </a>
+              <li style="background: #888888;" class="item1"><a href="#"><%=pp.name %><img class="arrow-img pull-right" src="images/arrow1.png" alt=""/> </a>
 
                 <%@sel="select * from products where productcla_id="+pp.id.to_s%>
                 <%@ptsubmenu=Product.find_by_sql(@sel)%>
 
                 <ul class="cute">
+                  <li class="subitem1"><a href=<%="products?pclaid="+pp.id.to_s%>>&nbsp;&nbsp;全部</a></li>
                   <%@ptsubmenu.each do|pp2|%>
                       <li class="subitem1"><a href=<%="products?ptypeid="+pp2.id.to_s%>>&nbsp;&nbsp;<%=pp2.name%></a></li>
                   <%end%>
@@ -26,7 +28,12 @@
 
 
 
+&nbsp;
+
+
     <%if @recordtype=="lists"%>
+
+        <%if @allcontent!=nil%>
     <div style="position:relative;left:80px">
       <table>
         <%start=0%>
@@ -39,14 +46,16 @@
              <%start=start+1%>
           <td>
             <div>
-              <a href=<%="products?ptypeid="+f.id.to_s%>>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <img style="width:230px;height:307px" src=<%="images/"+f.id.to_s+"/"+f.image_file_name%> alt=""/>
+              <a href=<%="products?ptypeid="+f.id.to_s%>>
                 <br><br>
                 <h3><%=f.name%></h3>
                 <div class="price1">
-                  <h4><%=f.price%><span>进入</span></h4>
+                  <h4>￥:<%=f.price%><span>进入</span></h4>
                 </div>
               </a>
+
             </div>
           </td>
           <%if start==3%>
@@ -57,7 +66,47 @@
         <!-- end grids_of_3 -->
       </table>
     </div>
+
         <%end%>
+    <%end%>
+
+<%if @recordtype=="sec"%>
+
+
+        <div style="position:relative;left:80px">
+          <table>
+            <%start=0%>
+            <%@allcontent.each do |f|%>
+
+
+                <%if start==0%>
+                    <tr >
+                <%end%>
+                <%start=start+1%>
+                <td>
+                  <div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <img style="width:230px;height:307px" src=<%="images/"+f.id.to_s+"/"+f.image_file_name%> alt=""/>
+                      <br><br>
+                    <a href=<%="products?ptypeid="+f.id.to_s%>>
+                      <h3><%=f.name%></h3>
+                      <div class="price1">
+                        <h4><%=f.price%><span>进入</span></h4>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+                <%if start==3%>
+                    <%start=0%>
+                    </tr>
+                <%end%>
+            <%end%>
+            <!-- end grids_of_3 -->
+          </table>
+        </div>
+<%end%>
+
 
 
 
@@ -71,6 +120,7 @@
             <tr>
               <td>
                 <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <img style="width:200px;height:200px" src=<%="images/"+@showcontent.id.to_s+"/"+@showcontent.image_file_name%>>
               </td>
               <td>
