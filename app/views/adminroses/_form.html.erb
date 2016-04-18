@@ -1,0 +1,51 @@
+<!--玫瑰花的功效-->
+<section id="main">
+  <div class="content">
+    <div class="register">
+      <div class="container">
+        <h1>玫瑰花的功效</h1>
+        <br>
+        <br>
+        <%= form_for(@adminrose) do |f| %>
+
+            <h2>
+              <span>标题</span>
+            </h2>
+            <div class="register-top-grid">
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+
+                <%= f.text_field :title ,class:"form-control"%>
+              </div>
+            </div>
+            <div>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <h2>
+                <div class="pull-left">
+                  <span>内容</span>
+                </div>
+              </h2>
+              <%= f.kindeditor :content, :simple_mode => true,:owner_id => @adminrose.id,height:800 %>
+            </div>
+            <div class="subscribe pull-right">
+              <%= f.submit '确定',class:'btn-small btn-color btn-pad' %>
+            </div>
+
+        <% end %>
+        <div class="clearfix">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!---->
