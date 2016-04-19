@@ -1,34 +1,6 @@
-class ProductsController < ApplicationController
+class ConfigsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   def index
-
-    @recordtype=""
-    @showcontent=nil
-
-    
-   if (params[:ptypeid]==nil && params[:pclaid]==nil)
-
-     @recordtype="lists"
-     @allcontent=Product.all
-
-   end
-
-
-    if (params[:pclaid]!=nil)
-     @recordtype="sec"
-      ssel="select * from products where productcla_id="+params[:pclaid]
-      @allcontent=Product.find_by_sql(ssel)
-
-    end
-
-    if (params[:ptypeid]!=nil)
-
-      @recordtype="one"
-
-      @showcontent=Product.find(params[:ptypeid])
-
-
-    end
 
   end
 
@@ -41,7 +13,7 @@ class ProductsController < ApplicationController
 
   # GET /tests/new
   def new
-    @adminproduct = Product.new
+    @adminproduct = Config.new
   end
 
   # GET /tests/1/edit
@@ -53,11 +25,11 @@ class ProductsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-    @adminproduct = Product.new(admin_params)
+    @adminproduct = Config.new(admin_params)
 
     respond_to do |format|
       if @adminproduct.save
-        format.html { redirect_to adminproducts_path, notice: 'Test was successfully created.' }
+        format.html { redirect_to admins_path, notice: 'Test was successfully created.' }
         format.json { render :show, status: :created, location: @admin }
       else
         format.html { render :new }
@@ -83,9 +55,9 @@ class ProductsController < ApplicationController
   # DELETE /tests/1
   # DELETE /tests/1.json
   def destroy
-    @product.destroy
+    @adminproduct.destroy
     respond_to do |format|
-      format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
+      format.html { redirect_to adminproducts_path, notice: '记录已经删除!' }
       format.json { head :no_content }
     end
   end
@@ -97,11 +69,11 @@ class ProductsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_admin
-    @adminproduct = Product.find(params[:id])
+    @adminproduct = Config.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_params
-    params.require(:product).permit(:productcla_id,:name, :price, :summary, :content, :image)
+    params.require(:adminproduct).permit(:tel,:qq, :address, :beian, :mail, :logo)
   end
 end
