@@ -1,0 +1,2 @@
+class XinwensController < ApplicationController
+end

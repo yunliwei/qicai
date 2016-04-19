@@ -1,0 +1,2 @@
+module XinwensHelper
+end
