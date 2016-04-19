@@ -4,17 +4,23 @@ Rails.application.routes.draw do
   resources :roses
   resources :wenhuas
   resources :adminwenhuas
-  resources :news
-  resources :adminnews
   resources :adminproducts
   resources :products
   resources :adminroses
   resources :productclas
+<<<<<<< HEAD
 
   resources :contacts
   resources :abouts
   resources :adminabouts
   resources :configs
+=======
+  resources :contacts
+  resources :abouts
+  resources :adminabouts
+  resources :adminxinwens
+  resources :xinwens
+>>>>>>> b36aa55513a78efbb4422d89e6bf319eb7c0a9b8
 
 
   namespace :admin do
