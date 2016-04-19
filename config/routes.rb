@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources :roses
   resources :wenhuas
   resources :adminwenhuas
-  resources :news
-  resources :adminnews
   resources :adminproducts
   resources :products
   resources :adminroses
@@ -13,7 +11,8 @@ Rails.application.routes.draw do
   resources :contacts
   resources :abouts
   resources :adminabouts
-
+  resources :adminxinwens
+  resources :xinwens
 
 
   namespace :admin do
