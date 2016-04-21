@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419012629) do
+ActiveRecord::Schema.define(version: 20160421040121) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -80,13 +80,17 @@ ActiveRecord::Schema.define(version: 20160419012629) do
   end
 
   create_table "sliders", force: :cascade do |t|
-    t.string   "link",               limit: 255
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
+    t.string   "link",                limit: 255
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "image_file_name",     limit: 255
+    t.string   "image_content_type",  limit: 255
+    t.integer  "image_file_size",     limit: 4
     t.datetime "image_updated_at"
+    t.string   "slider_file_name",    limit: 255
+    t.string   "slider_content_type", limit: 255
+    t.integer  "slider_file_size",    limit: 4
+    t.datetime "slider_updated_at"
   end
 
   create_table "tests", force: :cascade do |t|
