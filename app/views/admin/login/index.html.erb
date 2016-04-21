@@ -1,17 +1,17 @@
-
-
 <div class="middle-box text-center loginscreen  animated fadeInDown">
   <div>
     <div>
 
-      <h2 >水电十四局</h2>
+      <h2 >奇彩</h2>
 
     </div>
-    <h3>test</h3>
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
 
 
 
-    <%= form_for(:login,:html => {:class=>'m-t'}) do |f| %>
+    <%= form_for(:user_name, url: user_names_path,:html => {:class=>'m-t'}) do |f| %>
         <div class="form-group">
 
           <%= f.text_field :user_name ,class:"form-control",placeholder:"用户名"%>
