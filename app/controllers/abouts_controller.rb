@@ -3,6 +3,7 @@ class AboutsController < ApplicationController
   def index
     #@adminwenhua= Wenhua.all
     @aboutslefttitle = About.all
+    @contact = About.new
 
     if params[:id]
 
