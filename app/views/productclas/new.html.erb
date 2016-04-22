@@ -1,6 +1,11 @@
+<%= render 'top' %>
+<%= render 'adminmenu' %>
+<div class="container">
+  <h2>类型</h2>
+  <br>
+  <br>
+</div>
 <%= form_for(@adminproduct, :html => {:class=>'form-horizontal m-t',id:"signupForm",:multipart => true}) do |f| %>
-
-
     <div class="form-group">
       <label class="col-sm-3 control-label">产品类型：</label>
       <div class="col-sm-5">
@@ -8,10 +13,11 @@
       </div>
     </div>
     <div class="form-group">
-      <div class="col-sm-4 col-sm-offset-3">
-        <%= f.submit '提交',class:"btn btn-sucess" %>
+      <div class="col-sm-5 col-sm-offset-3">
+        <%= f.submit '提交',class:"btn btn-w-m btn-success mylink pull-right" %>
 
 
       </div>
     </div>
 <% end %>
+<%= render 'dibu' %>
