@@ -14,10 +14,12 @@ Rails.application.routes.draw do
   resources :adminabouts
   resources :adminxinwens
   resources :xinwens
+  resources :logins
 
 
 
 
+  match ':controller(/:action(/:id))(.:format)'
 
   namespace :admin do
     resource :sessions,only: [:index]
@@ -25,4 +27,6 @@ Rails.application.routes.draw do
     resource :sessions,only: [:new]
     match '/signin/new',to: 'sessions#new',via:'get'
   end
-  end
+end
+
+

@@ -24,12 +24,5 @@ class Admin::SessionsController < Admin::BaseController
     end
   end
 
-
-
-
-
-
-
-
 end
 

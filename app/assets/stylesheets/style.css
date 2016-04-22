@@ -1706,7 +1706,7 @@ h3.page-hed{
 	font-weight: 700;
 	color: #3498db;
 }
-/*--login--*/
+/*--logins--*/
 .login-left {
 	background: url(../images/bg-login.gif) no-repeat right bottom #ffffff;
 	border: 1px solid #ececec;
@@ -2000,7 +2000,7 @@ p.required {
 .forget a:hover{
 	text-decoration: none;
 }
-/*-- login-page-starts-here-- */
+/*-- logins-page-starts-here-- */
 .contact-box {
 	width: 60%;
 	margin: 3em auto 5em;

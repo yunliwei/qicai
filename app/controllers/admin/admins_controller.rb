@@ -24,7 +24,7 @@ class Admin::AdminsController<ApplicationController
 
 
   def chkrpt
-    @admin=Admin.find_by_name(params[:login])
+    @admin=Admin.find_by_name(params[:logins])
     if @admin
       json=false
     else
