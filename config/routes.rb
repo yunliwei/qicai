@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
 
 
-  match ':controller(/:action(/:id))(.:format)'
+
 
   namespace :admin do
     resource :sessions,only: [:index]

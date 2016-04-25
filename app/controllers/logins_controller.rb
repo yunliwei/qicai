@@ -1,30 +1,22 @@
 class LoginsController < ApplicationController
 
 
-  def new
+  def create
     adm= Admin.all
     if adm.count==0
-      Admin.create(user_name:'admin',password:'admin')
+      Admin.create(user_name:'admin',password:'admin',password_confirmation:'admin')
     end
-  end
-
-  def create
 
     admin = Admin.find_by(user_name:params[:login][:user_name])
 
-      if admin &&  admin.authenticate(params[:login][:password])
+      if admin &&  admin.authenticate(params[:password])
         session[:name]= admin.user_name
-redirect_to sides_path
+redirect_to sises_path
       else
         redirect_to action: 'new',id:0
 
     end
   end
-
-
-
-
-
 
 
 

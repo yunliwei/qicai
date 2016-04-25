@@ -2,24 +2,36 @@
   <div>
     <div>
 
-      <h1 class="logo-name">H+</h1>
+      <h2 >奇彩</h2>
 
     </div>
     <h3>test</h3>
 
 
-    <%= form_for(@admin, :html => {:class=>'m-t'}) do |f| %>
+
+    <%= form_for(:login,:html => {:class=>'m-t'}) do |f| %>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="用户名" required="">
+
+          <%= f.text_field :user_name ,class:"form-control",placeholder:"用户名"%>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="密码" required="">
+
+          <%= f.password_field :password ,class:"form-control",placeholder:"密码" %>
         </div>
+        <% if(params[:id])=="0" %>
+            <div class="alert alert-danger">
+              用户名或密码错误！
+            </div>
+        <% end %>
+        <% if(params[:id])=="1" %>
+            <div class="alert alert-danger">
+              用户已停用！
+            </div>
+        <% end %>
         <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
 
-        <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
-        </p>
+
     <% end %>
 
   </div>
