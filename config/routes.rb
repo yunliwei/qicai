@@ -15,11 +15,16 @@ Rails.application.routes.draw do
   resources :adminxinwens
   resources :xinwens
   resources :logins
+  resources :sliders
 
 
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 65508129bde492e6e8be762038aa433b5d9ec265
 
   namespace :admin do
     resource :sessions,only: [:index]

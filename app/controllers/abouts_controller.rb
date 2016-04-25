@@ -36,8 +36,9 @@ class AboutsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-    @about = About.new(about_params)
 
+
+    @about = About.new(about_params)
     respond_to do |format|
       if @about.save
         format.html { redirect_to adminabouts_path, notice: 'Test was successfully created.' }

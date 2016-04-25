@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
 
   # GET /tests/new
   def new
-    @admin = Admin.new
+    @contact = Contact.new
   end
 
   # GET /tests/1/edit
@@ -26,17 +26,10 @@ class ContactsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-    @admin = Admin.new(Admin_params)
 
-    respond_to do |format|
-      if @admin.save
-        format.html { redirect_to @admin, notice: 'Test was successfully created.' }
-        format.json { render :show, status: :created, location: @admin }
-      else
-        format.html { render :new }
-        format.json { render json: @admin.errors, status: :unprocessable_entity }
-      end
-    end
+    Contact.create(name:params[:name],title:params[:title],content:params[:content],tel:params[:tel])
+    flash[:success] = "谢谢您对公司的关注，我们会尽快处理您的留言!"
+    redirect_to contacts_path
   end
 
   # PATCH/PUT /tests/1
