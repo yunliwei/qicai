@@ -15,11 +15,12 @@ Rails.application.routes.draw do
   resources :adminxinwens
   resources :xinwens
   resources :logins
+  resources :sliders
 
 
 
 
-  match ':controller(/:action(/:id))(.:format)'
+
 
   namespace :admin do
     resource :sessions,only: [:index]

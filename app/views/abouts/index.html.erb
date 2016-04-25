@@ -7,60 +7,7 @@
     <%= render 'aboutsleft'%>
     <br>
     <%= @content.content.html_safe %>
-
-    <section id="main">
-
-      <h3 class="c-head">留言</h3>
-      <div class="clearfix"></div>
-
-      <div class="singel_right">
-        <div class="lcontact span_1_of_contact">
-          <div class="contact-form">
-
-
-
-
-
-
-
-
-
-            <%= form_for @contacts do |f| %>
-              <p class="comment-form-author"><label for="name">姓名:</label>
-                <input class="textbox" value="Enter your name here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" type="text">
-              </p>
-                <%= f .text_field :name%>
-              <p class="comment-form-author"><label for="title">标题:</label>
-                <input class="textbox" value="Enter your title here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" type="text">
-              </p>
-                <%= f .text_field :title%>
-              <p class="comment-form-author"><label for="title">电话:</label>
-                <input class="textbox" value="Enter your phone here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" type="text">
-              </p>
-                <%= f .text_field :tel%>
-              <p class="comment-form-author"><label for="message">内容:</label>
-                <textarea value="Enter your message here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">Enter your message here...</textarea>
-              </p>
-                <%= f .text_area :content%>
-              <input name="submit" id="submit" value="发送" type="submit">
-
-            <% end %>
-
-
-
-
-
-
-          </div>
-        </div>
-
-        <div class="clearfix"></div>
-      </div>
-
-
-      <div class="clearfix"></div>
-    </section>
-
+    <%= render 'aboutsdibu' %>
 
   </div>
 </div>
