@@ -1,0 +1,68 @@
+
+<div class="container">
+  <div class="content">
+    <h1>主页滚动图片</h1>
+    <br>
+    <br>
+
+
+    <%= form_for(@roll, :html => {:class=>'form-horizontal m-t',id:"signupForm",:multipart => true}) do |f| %>
+
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">链接：</label>
+          <div class="col-sm-5">
+            <%= f.text_field :link ,class:"form-control"%>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">图片：</label>
+          <div class="col-sm-3">
+            <%= f.file_field :image_file_name ,class:"form-control"%>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-3">
+            <%= f.submit '提交',class:"btn btn-sucess" %>
+          </div>
+        </div>
+        </div>
+    <% end %>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
