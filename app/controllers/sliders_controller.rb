@@ -20,7 +20,7 @@ class SlidersController < ApplicationController
   # GET /tests/1/edit
   def edit
     @rolls = Slider.all
-    @roll=@sliders.first
+
   end
 
 
@@ -45,12 +45,12 @@ class SlidersController < ApplicationController
   # PATCH/PUT /tests/1.json
   def update
     respond_to do   |format|
-      if @slider1.update(slider1_params)
-        format.html { redirect_to @slider1, notice: 'Test was successfully updated.' }
-        format.json { render :show, status: :ok, location: @slider1 }
+      if @roll.update(roll_params)
+        format.html { redirect_to sliders_path, notice: 'Test was successfully updated.' }
+        format.json { render :show, status: :ok, location: @roll }
       else
         format.html { render :edit }
-        format.json { render json: @slider1.errors, status: :unprocessable_entity }
+        format.json { render json: @roll.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,7 +58,7 @@ class SlidersController < ApplicationController
   # DELETE /tests/1
   # DELETE /tests/1.json
   def destroy
-    @slider1.destroy
+    @roll.destroy
     respond_to do |format|
       format.html { redirect_to sliders_path, notice: '记录已经删除!' }
       format.json { head :no_content }
@@ -77,6 +77,6 @@ class SlidersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def roll_params
-    params.require(:slider).permit(:link,:image_file_name)
+    params.require(:slider).permit(:link,:slider)
   end
 end
