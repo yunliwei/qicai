@@ -1,5 +1,4 @@
-class Admin::AdminsController<ApplicationController
-  layout 'admin/application'
+class AdminsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   def index
     @admins=Admin.all
@@ -14,7 +13,7 @@ class Admin::AdminsController<ApplicationController
 
   # GET /tests/new
   def new
-    @admin = Admin.new
+
   end
 
   # GET /tests/1/edit
@@ -24,7 +23,7 @@ class Admin::AdminsController<ApplicationController
 
 
   def chkrpt
-    @admin=Admin.find_by_name(params[:logins])
+    @admin=Admin.find_by_name(params[:login])
     if @admin
       json=false
     else
@@ -90,7 +89,7 @@ class Admin::AdminsController<ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_params
-    params.require(:admin).permit(:user_name, :password, :password_confirmation, :authority, :status)
+    params.require(:admins).permit(:user_name, :password, :password_confirmation, :authority, :status)
   end
 
 end

@@ -16,22 +16,8 @@ Rails.application.routes.draw do
   resources :xinwens
   resources :logins
   resources :sliders
+  resources :admins
 
-<<<<<<< HEAD
-
-
-
-
-
-
-  namespace :admin do
-    resource :sessions,only: [:index]
-    match '/signin',to: 'sessions#new',via:'get'
-    resource :sessions,only: [:new]
-    match '/signin/new',to: 'sessions#new',via:'get'
-  end
-=======
->>>>>>> 0be98bf5b724a61e9e5f28489eaef68af8ac2004
 end
 
 
