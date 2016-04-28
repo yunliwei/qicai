@@ -1,7 +1,7 @@
 <%= render 'top' %>
 <%= render 'menu' %>
 <%= render 'adminmenu' %>
-<%if Config.count==0%>
+<%if Config.count==0 %>
     <%Config.create(:tel=>"请输入电话号码",:qq=>"输入QQ",:address=>"输入地址",:beian=>"输入备案信息",:mail=>"输入邮箱地址")%>
 <%end%>
     <script>

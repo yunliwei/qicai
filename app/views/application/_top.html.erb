@@ -4,19 +4,31 @@
     <div class="wrap">
       <div class="header-left">
         <ul>
-          <li>电话： <%= public_config.tel %></li> |
-          <li>QQ :<%=public_config.qq %></li>
+          <li>电话：
+            <% if public_config %>
+            <%= public_config.tel %>
+                <% end %>
+          </li> |
+          <li>QQ :
+            <% if public_config %>
+            <%=public_config.qq %>
+                <% end%>
+          </li>
         </ul>
       </div>
       <div class="header-right">
         <ul>
           <li>
+            <% if public_config %>
             <i class="user"></i>
             邮箱： <%=public_config.mail %>
+                <% end %>
           </li>
           <li class="login">
+            <% if public_config %>
             <i class="lock"></i>
             地址: <%=public_config.address%>
+                <% end %>
           </li>
 
 

@@ -6,7 +6,7 @@ class ConfigsController < ApplicationController
       @config=Config.first
       redirect_to edit_config_path(@config)
     else
-      Config.create(title:'title',tel:'0877-1234567',mail:'examp@mail.com',address:'address')
+      Config.create(title:'',tel:'0877-1234567',mail:'examp@mail.com',address:'address')
       @config=Config.first
       redirect_to @config
     end

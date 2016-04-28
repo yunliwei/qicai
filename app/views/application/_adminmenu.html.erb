@@ -3,7 +3,9 @@
 </script>
 <div class="navigation-strip">
   <div class="container">
-    <h4><%= image_tag public_config.logo.url,height:30%></h4>
+    <% if public_config %>
+    <h4><%= image_tag public_config.logo.url,height:30,width: 100 %></h4>
+        <% end %>
 
 
 
