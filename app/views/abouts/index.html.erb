@@ -6,8 +6,16 @@
   <div class="container">
     <%= render 'aboutsleft'%>
     <br>
+
+    <% if @content %>
     <%= @content.content.html_safe %>
-    <%= render 'aboutsdibu' %>
+
+        <% else %>
+        <%= render 'aboutsdibu' %>
+        <% end %>
+
+
+
 
   </div>
 </div>

@@ -2,7 +2,7 @@
 <%= render 'adminmenu' %>
 <script charset="utf-8" src="/editor/kindeditor.js"></script>
 <script charset="utf-8" src="/editor/lang/zh-CN.js"></script>
-<%= render 'adminmenu' %>
+
 <div id="main">
   <div class="breadcrumb-wrapper">
     <div class="container">
@@ -22,18 +22,18 @@
           </tr>
           </thead>
           <tbody>
-          <%@abouts.each do |f| %>
+          <%@contacts.each do |f| %>
               <tr>
                 <td><%= f.name %></td>
-                <td><%= link_to f.title,about_path(f)%></td>
-                <td><%= f.information %></td>
+                <td><%= link_to f.title,contact_path(f)%></td>
+                <td><%= f.tel %></td>
                 <td><%= f.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
-                <td><%= link_to '查看',edit_about_path(f),class:"icon-pencil",'data-no-turbolink' => true %>&nbsp;<%= link_to '删除',f, method: :delete, data: { confirm: 'Are you sure?' },class:"icon-trash" %></td>
+                <td><%= link_to '删除',f, method: :delete, data: { confirm: 'Are you sure?' },class:"icon-trash" %></td>
               </tr>
           <% end %>
           </tbody>
         </table>
-        <%= link_to '返回',new_about_path,class:"btn-small btn-color btn-pad pull-right",'data-no-turbolink' => true %>
+
       </div>
     </div>
   </div>

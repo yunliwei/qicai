@@ -3,14 +3,14 @@ class AboutsController < ApplicationController
   def index
     #@adminwenhua= Wenhua.all
     @aboutslefttitle = About.all
-    @contact = About.new
+    @contact = Contact.new
 
-    if params[:id]
+    if params[:id].to_i > 0
 
       @content = About.find(params[:id])
 
     else
-      @content = About.first
+      @content = nil
 
     end
 
@@ -36,6 +36,7 @@ class AboutsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
+
 
 
     @about = About.new(about_params)
@@ -77,7 +78,9 @@ class AboutsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_about
+    if params[:id].to_i >0
     @adminabout = About.find(params[:id])
+      end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

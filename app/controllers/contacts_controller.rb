@@ -12,6 +12,7 @@ class ContactsController < ApplicationController
   # GET /tests/1
   # GET /tests/1.json
   def show
+
   end
 
   # GET /tests/new
@@ -27,21 +28,37 @@ class ContactsController < ApplicationController
   # POST /tests.json
   def create
 
-    Contact.create(name:params[:name],title:params[:title],content:params[:content],tel:params[:tel])
-    flash[:success] = "谢谢您对公司的关注，我们会尽快处理您的留言!"
-    redirect_to contacts_path
+     #Contact.create(contact_params)
+    # flash[:success] = "谢谢您对公司的关注，我们会尽快处理您的留言!"
+    # redirect_to abouts_path
+
+
+
+    @contact = Contact.new(contact_params)
+
+     respond_to do |format|
+
+      if @contact.save
+
+         format.html { redirect_to abouts_path, notice: 'Test was successfully created.' }
+        format.json { render :show, status: :created, location: @about }
+
+     end
+end
   end
+
+
 
   # PATCH/PUT /tests/1
   # PATCH/PUT /tests/1.json
   def update
     respond_to do |format|
-      if @admin.update(admin_params)
-        format.html { redirect_to @admin, notice: 'Test was successfully updated.' }
-        format.json { render :show, status: :ok, location: @admin }
+      if @contact.update(contact_params)
+        format.html { redirect_to @contact, notice: 'Test was successfully updated.' }
+        format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit }
-        format.json { render json: @admin.errors, status: :unprocessable_entity }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,6 +77,7 @@ class ContactsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_contact
     @contact = Contact.find(params[:id])
+
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
