@@ -12,16 +12,6 @@ end
   def create
 
 
-
-
-
-
-
-
-
-
-
-
     admin = Admin.find_by(user_name:params[:login][:user_name])
     if admin && admin.authenticate(params[:login][:password])
 
