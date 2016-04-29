@@ -17,27 +17,27 @@
 
             <%= form_for @contact do |f| %>
                 <p class="comment-form-author"><label for="name">姓名:</label>
-                  <input type="text" class="textbox" value="Enter your name here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your name here...';}">
 
-                  <%= f.text_field :name,class:"textbox",placeholder:'asdfasdfasd' %>
+
+                  <%= f.text_field :name,class:"textbox",placeholder:'请填写您的姓名' %>
                 </p>
 
                 <p class="comment-form-author"><label for="title">标题:</label>
 
-                  <%= f.text_field :title %>
+                  <%= f.text_field :title,class:"textbox",placeholder:'标题'  %>
                 </p>
 
                 <p class="comment-form-author"><label for="title">电话:</label>
 
-                  <%= f.text_field :tel %>
+                  <%= f.text_field :tel,class:"textbox",placeholder:'电话'  %>
                 </p>
 
                 <p class="comment-form-author"><label for="message">内容:</label>
 
-                  <%= f.text_area :content %>
+                  <%= f.text_area :content,class:"textbox",placeholder:'内容'  %>
                 </p>
 
-               <%= f.submit%>
+               <%= f.submit '确定'%>
 
             <% end %>
 
