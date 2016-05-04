@@ -20,13 +20,16 @@
           <th style="text-align:center">产品名称</th>
           <th style="text-align:center">价格</th>
           <th style="text-align:center">产品描述</th>
+
+          <th style="text-align:center">显示主页</th>
+          <th style="text-align:center">编辑</th>
         </tr>
         </thead>
         <tbody>
         <% @leftcontent.each do |f| %>
             <tr>
               <td>
-                <%@section=Productcla.find(f.productcla_id)%><%=@section.name%> ID:<%= f.productcla_id %>
+                <%@section=Productcla.find(f.productcla_id)%><%=@section.name%> <%= f.productcla_id %>
               </td>
               <td style="text-align:center">
                 <%= f.name %>
@@ -37,10 +40,18 @@
               <td style="text-align:center">
                 <%= f.summary %>
               </td>
+              </td>
+
               <td>
+                <input type="checkbox" value="1" name="roles[]" id="roles_" class="center">
+                <label for="SuperAdmin"></label>
+              </td>
+
+              <td>
+
                 <%= link_to "编辑", edit_adminproduct_path(f),class: "fa fa-pencil" %>&nbsp;
                 <%= link_to '删除', adminproduct_path(f), class: "fa fa-trash", method: :delete, data: { confirm: 'Are you sure?' } %>
-              </td>
+
             </tr>
         <% end %>
         </tbody>
