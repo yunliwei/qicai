@@ -2,7 +2,7 @@ class RosesController < ApplicationController
   before_action :set_rose, only: [:show, :edit, :update, :destroy]
   def index
 
-    @roselefttitle = Rose.all
+    @lefttitle = Rose.all
 
     if params[:id]
 
