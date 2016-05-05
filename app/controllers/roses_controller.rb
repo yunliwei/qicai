@@ -53,7 +53,7 @@ class RosesController < ApplicationController
   def update
     respond_to do |format|
       if @adminrose.update(rose_params)
-        format.html { redirect_to adminrose_path, notice: 'Test was successfully updated.' }
+        format.html { redirect_to adminroses_path, notice: 'Test was successfully updated.' }
         format.json { render :show, status: :ok, location: @adminrose }
       else
         format.html { render :edit }
