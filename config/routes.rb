@@ -18,20 +18,6 @@ Rails.application.routes.draw do
   resources :sliders
   resources :admins
 
-
-
-
-
-
-
-
-  namespace :admin do
-    resource :sessions,only: [:index]
-    match '/signin',to: 'sessions#new',via:'get'
-    resource :sessions,only: [:new]
-    match '/signin/new',to: 'sessions#new',via:'get'
-  end
-
 end
 
 

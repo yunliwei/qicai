@@ -20,11 +20,11 @@
 <div class="sub-cate">
   <div class=" top-nav rsidebar span_1_of_left">
     <h3 class="cate"></h3>
-    <ul class="menu">
+    <ul class="menu" >
 
       <li>
         <ul class="kid-menu">
-          <% @lefttitle.each do |f| %>
+          <% @roselefttitle.each do |f| %>
               <li><%= link_to f.title,roses_path(id:f) %></li>
           <% end %>
         </ul>
@@ -32,3 +32,5 @@
     </ul>
   </div>
 </div>
+
+

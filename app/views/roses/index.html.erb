@@ -5,7 +5,25 @@
   <div class="right">
     <%= render 'roses/left'%>
     <br>
-    <%= @content.content.html_safe %>
+
+    <article class="single">
+      <div class="entry-top"></div>
+
+      <h4 class="entry-title">
+        <span class="title">玫瑰花的作用和功效</span>
+        <span class="entry-comments"><a href="#comments" title="Go to the comments" class="poshytip"></a></span>
+      </h4>
+
+
+
+      <p> <%= @rosecontent.content.html_safe %></p>
+
+
+
+      <div class="entry-date"><span class="entry-day"></span><span class="entry-year">sep 2011</span></div>
+    </article>
+
+
 
 
   </div>
