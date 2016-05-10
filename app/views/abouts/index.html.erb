@@ -2,56 +2,25 @@
 <%= render 'top' %>
 <%= render 'menu' %>
 
-<div class="content">
-  <div class="container">
+<div class="right">
+  <div class="right">
     <%= render 'aboutsleft'%>
     <br>
 
     <% if @content %>
-    <%= @content.content.html_safe %>
-
+        <article class="single">
+        <div class="main" style="margin-left: 6%">
+    <%=@content.content.html_safe %>
+        </div>
+        </article>
         <% else %>
         <%= render 'aboutsdibu' %>
         <% end %>
 
 
 
-
   </div>
 </div>
-
-<div class="right">
-  <div class="right">
-    <%= render 'roses/left'%>
-    <br>
-
-    <article class="single">
-      <div class="entry-top"></div>
-
-      <h4 class="entry-title">
-        <span class="title">玫瑰花的作用和功效</span>
-        <span class="entry-comments"><a href="#comments" title="Go to the comments" class="poshytip"></a></span>
-      </h4>
-
-
-
-      <p> <%= @content.content.html_safe %></p>
-
-
-
-      <div class="entry-date"><span class="entry-day"></span><span class="entry-year"></span></div>
-    </article>
-
-
-
-
-  </div>
-</div>
-
-
-
-
-
 
 
 

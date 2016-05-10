@@ -15,7 +15,7 @@
                 <%@ptsubmenu=Product.find_by_sql(@sel)%>
 
                 <ul class="cute">
-                  <li class="subitem1"><a href=<%="products?pclaid="+pp.id.to_s%>>&nbsp;&nbsp;全部</a></li>
+
                   <%@ptsubmenu.each do|pp2|%>
                       <li class="subitem1"><a href=<%="products?ptypeid="+pp2.id.to_s%>>&nbsp;&nbsp;<%=pp2.name%></a></li>
                   <%end%>
