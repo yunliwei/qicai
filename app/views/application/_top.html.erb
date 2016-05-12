@@ -7,8 +7,8 @@
             <% if public_config %>
             <%= public_config.tel %>
                 <% end %>
-          </li> |
-          <li>QQ :
+          </li>&nbsp; | &nbsp;
+          <li> QQ :
             <% if public_config %>
             <%=public_config.qq %>
                 <% end%>
@@ -17,16 +17,14 @@
       </div>
       <div class="header-right">
         <ul>
-          <li>
+          <li>邮箱：
             <% if public_config %>
-            <i class="user"></i>
-            邮箱： <%=public_config.mail %>
+             <%=public_config.mail %>
                 <% end %>
-          </li>
-          <li class="login">
+          </li> &nbsp; | &nbsp;
+          <li>地址 :
             <% if public_config %>
-            <i class="lock"></i>
-            地址: <%=public_config.address%>
+             <%=public_config.address%>
                 <% end %>
           </li>
 
