@@ -63,7 +63,6 @@
             </tr>
           <%end%>
          <%end%>
-        <!-- end grids_of_3 -->
       </table>
     </div>
 
@@ -87,7 +86,7 @@
                   <div>
 
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <img style="width:230px;height:307px" src=<%="images/"+f.id.to_s+"/"+f.image_file_name%> alt=""/>
+                      <img style="width:230px;height:307px" src=  <%="images/"+f.id.to_s+"/"+f.image_file_name%> alt=""/>
                       <br><br>
                     <a href=<%="products?ptypeid="+f.id.to_s%>>
                       <h3><%=f.name%></h3>
@@ -102,7 +101,6 @@
                     </tr>
                 <%end%>
             <%end%>
-            <!-- end grids_of_3 -->
           </table>
         </div>
 <%end%>
