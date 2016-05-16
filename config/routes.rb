@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :sliders
   resources :admins
 
+  root 'sides#index'
+
 end
 
 
