@@ -9,12 +9,15 @@
           <a href="products"><h4>&nbsp;&nbsp;&nbsp;全部</h4></a>
           <%@pt.each do |pp|%>
 
-              <li style="background: #888888;" class="item1"><a href="#"><%=pp.name %><img class="arrow-img pull-right" src="images/arrow1.png" alt=""/> </a>
+              <li style="background: #888888;" class="item1">
+                <a href="#"><%=pp.name %>
+                  <img  src="images/arrow1.png" alt=""/> </a>
 
                 <%@sel="select * from products where productcla_id="+pp.id.to_s%>
                 <%@ptsubmenu=Product.find_by_sql(@sel)%>
 
                 <ul class="cute">
+
 
                   <%@ptsubmenu.each do|pp2|%>
                       <li class="subitem1"><a href=<%="products?ptypeid="+pp2.id.to_s%>>&nbsp;&nbsp;<%=pp2.name%></a></li>

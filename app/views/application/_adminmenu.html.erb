@@ -1,11 +1,12 @@
 <script>
     $(document).ready(function(){$(".megamenu").megamenu();});
 </script>
+
+    <% if public_config %>
+    <div style="float: left;margin-left: 100px;height: 50px;"><%= image_tag public_config.logo.url,height:80,width: 140 %></div>
+        <% end %>
 <div class="navigation-strip">
   <div class="container">
-    <% if public_config %>
-    <h4><%= image_tag public_config.logo.url,height:30,width: 100 %></h4>
-        <% end %>
 
 
 
