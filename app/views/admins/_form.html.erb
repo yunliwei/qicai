@@ -32,9 +32,9 @@
         <label class="col-sm-3 control-label">账号：</label>
         <div class="col-sm-5">
           <% if @url.to_s.last(4)!="edit" %>
-              <%= f.text_field :user_name ,id:"login",class:"form-control"%>
+              <%= f.text_field :use_name ,id:"login",class:"form-control"%>
           <% else %>
-              <%= f.text_field :user_name ,id:"login",readonly:"false",class:"form-control"%>
+              <%= f.text_field :use_name ,id:"login",readonly:"false",class:"form-control"%>
           <% end %>
         </div>
       </div>
