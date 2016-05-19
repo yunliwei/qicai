@@ -17,14 +17,14 @@
 
   });
 </script>
-<div class="sub-cate">
+<div class="sub-cate"style="width: 15%">
   <div class=" top-nav rsidebar span_1_of_left">
-    <h3 class="cate"></h3>
-    <ul class="menu">
+    <h3 class="cate">玫瑰花的作用与功效</h3>
+    <ul class="menu" >
 
       <li>
         <ul class="kid-menu">
-          <% @roselefttitle.each do |f| %>
+          <% @lefttitle.each do |f| %>
               <li><%= link_to f.title,roses_path(id:f) %></li>
           <% end %>
         </ul>
@@ -32,3 +32,5 @@
     </ul>
   </div>
 </div>
+
+

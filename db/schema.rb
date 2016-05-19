@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20160425035645) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "user_name",       limit: 255
-    t.string   "password",        limit: 255
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "password_digest", limit: 255

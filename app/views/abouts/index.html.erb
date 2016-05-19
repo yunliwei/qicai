@@ -2,28 +2,25 @@
 <%= render 'top' %>
 <%= render 'menu' %>
 
-<div class="content">
-  <div class="container">
+<div class="right">
+  <div class="right">
     <%= render 'aboutsleft'%>
     <br>
 
     <% if @content %>
-    <%= @content.content.html_safe %>
-
+        <article class="single">
+        <div class="main" style="margin-left: 6%">
+    <%=@content.content.html_safe %>
+        </div>
+        </article>
         <% else %>
         <%= render 'aboutsdibu' %>
         <% end %>
 
 
 
-
   </div>
 </div>
-
-
-
-
-
 
 
 
