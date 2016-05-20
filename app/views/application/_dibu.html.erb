@@ -7,9 +7,20 @@
 
     <div class="copyright text-center">
       <% if public_config %>
-      <p>备案:<%=public_config.beian %> <a href="http://w3layouts.com">  内容待定</a></p>
-          <% end %>
+      <p>备案:<%=public_config.beian %>
+        <%= link_to '我们的位置', sitemaps_path, class:'mylink', 'data-no-turbolink' => true %>
+      </p>
+
+    <% end %>
+
     </div>
 
   </div>
+
+
+
+
+
+
 </div>
+

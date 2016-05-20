@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :logins
   resources :sliders
   resources :admins
-
+  resources :sitemaps
   root 'sides#index'
 
 end
