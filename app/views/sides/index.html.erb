@@ -1,3 +1,4 @@
+
 <%= render 'top' %>
 <%= render 'menu'  %>
 <%= render 'slider'  %>
@@ -5,3 +6,43 @@
 <%= render 'zhongbu' %>
 <%= render 'dibu' %>
 
+<%= render 'tanchuang' %>
+<script>
+    function openwin(){
+        window.open("page.html","","width=200,height=200" ;)
+    }
+    function get_cookie(Name){
+        var search = Name+ "="
+        var returnvalue ="";
+        if (documents.cookie.length >0){
+            offset = documents.cookie.indexOf(search)
+            if (offset!=-1){
+                offset += search.length
+                end = documents.cookie.indexOf (";",offset);
+                if (end ==-1)
+                    end = documents.cookie.length;
+                returnvalue =unescape(documents.cookie.substring(offset,end))
+            }
+        }
+        return returnvalue;
+    }
+    function loadpopup(){
+        if (get_cookie('popped')==";){
+            openwin()
+        documents.cookie="popped=yes"
+    }
+    }
+</script>
+<script language="javascript">
+    <!--
+    var gt = unescape('%3e');
+    var popup = null;
+    var over = "Launch Pop-up Navigator";
+    popup = window.open('', 'popupnav', 'width=500,height=500,resizable=0,scrollbars=auto'); // width=500,height=500为窗口长和宽
+    if (popup != null) {
+        if (popup.opener == null) {
+            popup.opener = self; }
+        popup.location.href = '要打开的文件名';
+    }
+    // -->
+</script>
