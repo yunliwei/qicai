@@ -1,0 +1,82 @@
+
+
+<section id="main">
+  <div class="content">
+    <div class="register">
+<div class="container content">
+            <h1>在线客服</h1>
+          <br>
+          <br>
+          <%= form_for(@adminkefu) do |f| %>
+
+<h2>
+                <span>客服QQ</span>
+</h2>
+              <div class="register-top-grid">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+
+                <%= f.text_field :kefuqq,class:"form-control"%>
+                  </div>
+                </div>
+
+
+<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>
+        <span>客服电话</span>
+      </h2>
+      <div class="register-top-grid">
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+
+          <%= f.text_field :kefutel,class:"form-control"%>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+              <div class="subscribe pull-right">
+                <%= f.submit '确定',class:'btn btn-w-m btn-success mylink pull-right' %>
+                  </div>
+
+          <% end %>
+            <div class="clearfix">
+            </div>
+</div>
+    </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= render 'dibu' %>
+
+
+
+
+
+
+
+

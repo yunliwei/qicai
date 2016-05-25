@@ -18,6 +18,14 @@ Rails.application.routes.draw do
   resources :sliders
   resources :admins
   resources :sitemaps
+  resources :kefus
+  resources :adminkefus
+
+
+
+
+
+
   root 'sides#index'
 
 end
