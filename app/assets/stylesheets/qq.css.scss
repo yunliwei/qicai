@@ -29,7 +29,7 @@ a, button {
 	display: block;
 	width: 85px;
 	height: 148px;
-	background: url(../images/qq_online_trigger.png) no-repeat;
+	background: image_url('qq_online_trigger.png') no-repeat;
 	font-size: 16px;
 	text-align: center;
 	color: #000;
@@ -38,28 +38,28 @@ a, button {
 	width: 144px;
 }
 .online_w_top {
-	background: url(../images/online_bg.png) no-repeat -36px 0;
+	background: image_url('online_bg.png') no-repeat -36px 0;
 	height: 10px;
-	_background: url(../images/online_bg_ie6.png) no-repeat -36px 0;
+	_background: image_url('online_bg_ie6.png') no-repeat -36px 0;
 	_margin-bottom: -7px;
 }
 .online_w_c {
 	background: url(../images/online_bg.png) repeat-y 0 -185px;
 	padding: 0 5px;
-	_background: url(../images/online_bg_ie6.png) repeat-y 0 -185px
+	_background: image_url('online_bg_ie6.png') repeat-y 0 -185px
 }
 .online_w_bottom {
-	background: url(../images/online_bg.png) repeat-y -36px -35px;
+	background: image_url('online_bg.png') repeat-y -36px -35px;
 	height: 29px;
-	_background: url(../images/online_bg_ie6.png) repeat-y -36px -35px;
+	_background: image_url('online_bg_ie6.png') repeat-y -36px -35px;
 }
 .online_content {
-	background: url(../images/online_bg.png) no-repeat -147px -185px;
+	background:image_url('online_bg.png') no-repeat -147px -185px;
 	padding-top: 11px;
-	_background: url(../images/online_bg_ie6.png) no-repeat -147px -185px;
+	_background: image_url('online_bg_ie6.png') no-repeat -147px -185px;
 }
 .online_content a.qq_icon {
-	background: url(../images/online_bg.png) no-repeat -37px -130px;
+	background: image_url('online_bg.png') no-repeat -37px -130px;
 	width: 121px;
 	height: 25px;
 	display: block;
@@ -73,7 +73,7 @@ a, button {
 	color: #FFF;
 }
 .online_bar h2 {
-	background: url(../images/online_bg.png) repeat-x 0 -156px;
+	background: image_url('online_bg.png') repeat-x 0 -156px;
 	height: 29px;
 	line-height: 27px;
 	font-size: 12px;
@@ -87,12 +87,12 @@ a, button {
 	cursor: pointer;
 }
 .expand h2 a {
-	background: url(../images/online_bg.png) no-repeat -36px -69px;
-	_background: url(../images/online_bg_ie6.png) no-repeat -36px -69px;
+	background: image_url('online_bg.png') no-repeat -36px -69px;
+	_background: image_url('online_bg_ie6.png') no-repeat -36px -69px;
 }
 .collapse h2 a {
-	background: url(../images/online_bg.png) no-repeat -36px -96px;
-	_background: url(../images/online_bg_ie6.png) no-repeat -36px -96px;
+	background: image_url('online_bg.png') no-repeat -36px -96px;
+	_background: image_url('online_bg_ie6.png') no-repeat -36px -96px;
 }
 .expand h2 a:hover, .collapse h2 a:hover {
 	text-decoration: none;
