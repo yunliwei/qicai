@@ -1,16 +1,4 @@
-html, body, div, span, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, button {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-family: "Microsoft YaHei";
-	font-size: 12px;
-	line-height: 1.5;
-	outline: 0;
-	color: #333;
-}
-body {
-	overflow-x: hidden
-}
+
 ol, ul, li {
 	list-style: none
 }
@@ -44,19 +32,19 @@ a, button {
 	_margin-bottom: -7px;
 }
 .online_w_c {
-	background: url(../images/online_bg.png) repeat-y 0 -185px;
+	background: image_url('online_bg.png') repeat-y 0 -185px;
 	padding: 0 5px;
-	_background: image_url('online_bg_ie6.png') repeat-y 0 -185px
+
 }
 .online_w_bottom {
 	background: image_url('online_bg.png') repeat-y -36px -35px;
 	height: 29px;
-	_background: image_url('online_bg_ie6.png') repeat-y -36px -35px;
+
 }
 .online_content {
 	background:image_url('online_bg.png') no-repeat -147px -185px;
 	padding-top: 11px;
-	_background: image_url('online_bg_ie6.png') no-repeat -147px -185px;
+
 }
 .online_content a.qq_icon {
 	background: image_url('online_bg.png') no-repeat -37px -130px;
@@ -88,11 +76,11 @@ a, button {
 }
 .expand h2 a {
 	background: image_url('online_bg.png') no-repeat -36px -69px;
-	_background: image_url('online_bg_ie6.png') no-repeat -36px -69px;
+
 }
 .collapse h2 a {
 	background: image_url('online_bg.png') no-repeat -36px -96px;
-	_background: image_url('online_bg_ie6.png') no-repeat -36px -96px;
+
 }
 .expand h2 a:hover, .collapse h2 a:hover {
 	text-decoration: none;

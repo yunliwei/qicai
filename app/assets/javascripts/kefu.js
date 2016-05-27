@@ -1,3 +1,4 @@
+
 var Page = {
     init: function() {
         var a = this;
