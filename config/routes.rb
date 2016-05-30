@@ -20,9 +20,8 @@ Rails.application.routes.draw do
   resources :sitemaps
   resources :kefus
   resources :adminkefus
-
-
-
+  resources :frames
+  resources :adminframes
 
 
 
