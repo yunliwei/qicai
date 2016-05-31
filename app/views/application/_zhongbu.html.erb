@@ -1,15 +1,39 @@
 
+
+<script type="text/javascript">
+    $(function() {
+        var menu_ul = $('.menu > li > ul'),
+                menu_a  = $('.menu > li > a');
+        menu_ul.hide();
+        menu_a.click(function(e) {
+            e.preventDefault();
+            if(!$(this).hasClass('active')) {
+                menu_a.removeClass('active');
+                menu_ul.filter(':visible').slideUp('normal');
+                $(this).addClass('active').next().stop(true,true).slideDown('normal');
+            } else {
+                $(this).removeClass('active');
+                $(this).next().stop(true,true).slideUp('normal');
+            }
+        });
+
+    });
+</script>
+
+
+
+
   <div class="wrap">
 <div class="transport-grid" style="position:relative; top:70px">
+  <% @frames.each do |k| %>
+  <div class="col-md-4 shipping">
+    <div style="width:460px;height:410px">
+    <h3><%= k.ftitle %></h3>
+    <p><%= k.fcontent %></p>
+    </div>
+  </div>
+  <% end %>
 
-  <div class="col-md-4 shipping">
-    <h3><i class="shipping-icon"></i>100 % 鲜花制作</h3>
-    <p>我们在安宁种植200多亩玫瑰基地，从源头把关，把环保、绿色、健康做为公司的发展方向</p>
-  </div>
-  <div class="col-md-4 shipping">
-    <h3><i class="correct-icon"></i>100 % 鲜花制作</h3>
-    <p>我们在安宁种植200多亩玫瑰基地，从源头把关，把环保、绿色、健康做为公司的发展方向</p>
-  </div>
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>

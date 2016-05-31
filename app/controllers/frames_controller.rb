@@ -4,7 +4,14 @@ class FramesController < ApplicationController
 
     @frames = Frame.all
 
+    if params[:id]
 
+      @fcontent = Frame.find(params[:id])
+
+    else
+      @fcontent = Frame.first
+
+    end
 
 
   end
@@ -29,9 +36,7 @@ class FramesController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-
-
-
+    
     @frame = Frame.new(frame_params)
     respond_to do |format|
       if @frame.save
