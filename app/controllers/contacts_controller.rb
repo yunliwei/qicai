@@ -27,13 +27,6 @@ class ContactsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def create
-
-     #Contact.create(contact_params)
-    # flash[:success] = "谢谢您对公司的关注，我们会尽快处理您的留言!"
-    # redirect_to abouts_path
-
-
-
     @contact = Contact.new(contact_params)
 
      respond_to do |format|
