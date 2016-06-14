@@ -15,42 +15,39 @@
 
 
 
-
-
-
-
-
-
-
-
-<div class="ibox-content">
+<br>
+<br>
+<div class="ibox-content pull-right">
   <%= form_for(@admin, :html => {:class=>'form-horizontal m-t',id:"signupForm"}) do |f| %>
-
       <% @url=request.url %>
       </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label">账号：</label>
-        <div class="col-sm-5">
+      <div class="form-group container">
+        <label class="col-sm-0 control-label">账号：</label>
+        <div class="col-sm-8">
           <% if @url.to_s.last(4)!="edit" %>
-              <%= f.text_field :use_name ,id:"login",class:"form-control"%>
+              <%= f.text_field :user_name ,id:"login",class:"form-control"%>
           <% else %>
-              <%= f.text_field :use_name ,id:"login",readonly:"false",class:"form-control"%>
+              <%= f.text_field :user_name ,id:"login",readonly:"true",class:"form-control"%>
           <% end %>
         </div>
       </div>
+<br>
+      <br>
 
+      <% if @url.to_s.last(4)=="edit" %>
 
-      <% if @url.to_s.last(4)!="edit" %>
-
-          <div class="form-group">
-            <label class="col-sm-3 control-label">密码：</label>
-            <div class="col-sm-5">
+          <div class="form-group container">
+            <label class="col-sm-0 control-label">新密码：</label>
+            <div class="col-sm-8">
               <%= f.password_field :password ,id:"password",class:"form-control"%>
             </div>
+
           </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label">确认密码：</label>
-            <div class="col-sm-5">
+          <br>
+          <br>
+          <div class="form-group container">
+            <label class="col-sm-0 control-label">确认密码：</label>
+            <div class="col-sm-8">
               <%= f.password_field :password_confirmation ,class:"form-control"%>
             </div>
           </div>
@@ -73,23 +70,14 @@
         </div>
       </div>-->
 
-
-
-
-
-
-
-
-
-
+<br>
+      <br>
 
 
       <div class="form-group">
         <div class="col-sm-4 col-sm-offset-3">
-          <button class="btn btn-sucess" type="submit">提交</button>
-
+          <button class="btn btn-w-m btn-success mylink pull-right" type="submit">确认修改</button>
         </div>
       </div>
-
   <% end %>
 </div>
