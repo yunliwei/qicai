@@ -9,11 +9,12 @@ class AdminsController < ApplicationController
 
 
   def show
+
   end
 
   # GET /tests/new
   def new
-
+    @admin = Admin.new
   end
 
   # GET /tests/1/edit
@@ -89,7 +90,7 @@ class AdminsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_params
-    params.require(:admins).permit(:user_name, :password, :password_confirmation, :authority, :status)
+    params.require(:admin).permit(:user_name, :password, :password_confirmation)
   end
 
 end
