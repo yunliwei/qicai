@@ -11,17 +11,15 @@
 <div class="slider">
   <div class="callbacks_container">
     <ul class="rslides" id="slider" style="max-height: 600px;...">
-
-
       <%= public_slider.each do |slider| %>
-
           <li data-delay="6000" data-masterspeed="300" data-transition="fade">
             <div class="slotholder">
 
 
-              <%= image_tag slider.slider.url,Height:100 %>
-            </div>
+             <%= image_tag slider.slider.url,width: '100%',height: '100%'%>
 
+
+            </div>
           </li>
       <% end %>
     </ul>
